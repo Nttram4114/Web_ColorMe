@@ -1,0 +1,210 @@
+
+/* Sale chương trình học toàn diện */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #ffffff, #ffffff);
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.left h1 {
+    font-weight: bold;
+}
+
+.new-badge {
+    background: linear-gradient(90deg, #e33e19, #ff9463);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.price {
+    text-align: right;
+    padding-right: 28px;
+}
+
+.discount-price {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: gray;
+    font-size: 14px;
+}
+
+.countdown {
+    display: flex;
+    gap: 4px;
+}
+
+.time-box {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.time-box span {
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+}
+
+.cta-btn {
+    background: linear-gradient(90deg, #ffa95d, #ff5619);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.price-countdown-container{
+    display: flex; 
+    flex-direction: column;
+}
+.price-countdown{
+    display: flex; 
+    align-items: center; 
+    padding-right: 50px;
+}
+
+
+/* Thanh menu */
+.top-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    padding: 10px 20px;
+    color: white;
+}
+
+.menu-list {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding-left: 40px;
+    margin: 0;
+}
+
+.menu-list li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 5px;
+}
+
+.menu-list li:hover {
+    color: #ff4747;
+}
+
+.new-badge-menu {
+    background: red;
+    color: white;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.menu-right {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding-right: 50px;
+}
+
+.language, .search {
+    cursor: pointer;
+}
+
+.language i, .search i {
+    margin-left: 5px;
+}
+/* Mobile styles */
+@media (max-width: 600px) {
+    .top-menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-list {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-right {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .language, .search {
+        margin-left: 0;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .top-menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-list {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-right {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .language, .search {
+        margin-left: 0;
+    }
+}
+
+/* PC styles */
+@media (min-width: 1025px) {
+    .top-menu {
+        flex-direction: row;
+    }
+
+    .menu-list {
+        flex-direction: row;
+    }
+
+    .menu-right {
+        flex-direction: row;
+    }
+
+    .language, .search {
+        margin-left: 20px;
+    }
+}
+
