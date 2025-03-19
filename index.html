@@ -6,6 +6,8 @@
     <title>COLOR ME</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <!--Sale chương trình học toàn diện-->
@@ -35,6 +37,7 @@
         <span class="close-btn">✖</span>
     </div>
     
+
     <!--THANH Menu đen-->
     <nav class="top-menu">
         <ul class="menu-list">
@@ -55,6 +58,8 @@
             </div>  
         </div>
     </nav>
+
+
     <!--Thanh nav và đăng nhập-->
     <header class="top-header">
         <div class="container">
@@ -80,10 +85,22 @@
         </div>
     </header>
 
+
     <!-- Giao diện Thiết kế đồ họa -->
-    <div class="body-content">
-        <div class="content-left" style="padding-left: 100px;">
-            <img src="images//logo2.png" alt="Logo" class="logo" style="height: 150px; width: 150px;">
+    <div class="body-content" style="padding-left: 150px;">
+        <div class="content-left" >
+            <div class="image-container">
+                <img 
+                  src="https://d1j8r0kxyu9tj8.cloudfront.net/files/9KugzKXA7kqu4xFPfukNipsX3mOxGkmLP3zL7nug.png" 
+                  alt="Background Image" style="animation: rotate 15s linear infinite;"
+                >
+                <img 
+                  src="https://d1j8r0kxyu9tj8.cloudfront.net/files/dmuHjNWaFXI78xfJOtt4s7nZXRVV65ySzCTL2xLF.png" 
+                  alt="Overlay Image" 
+                  class="overlay-image"
+                >
+              </div>              
+              
             <div class="tools">
                 <span class="tool ps">Ps</span>
                 <span class="tool ai">Ai</span>
@@ -92,7 +109,7 @@
         </div>
             
         <div class="content-right">
-            <div class="text-container">
+            <div class="text-container" style="padding-left: 500px;">
                 <h1>THIẾT KẾ ĐỒ HỌA</h1>
                 <div class="subtitle">
                     <h2>chuyên sâu</h2>
@@ -101,6 +118,7 @@
             </div>
         </div>
     </div>
+
     <div class="body-content-bottom">
         <div class="ct-bt-left">
             <p>Kéo dài 6 tháng, tập trung vào kiến thức trọng tâm</p>
@@ -110,6 +128,7 @@
             <img src="images//banner.png" alt="Image">
         </div>
     </div>
+
 
     <!-- NHỮNG ĐIỀU BẠN CHỈ CÓ THỂ TÌM THẤY-->
     <div class="section">
@@ -166,6 +185,7 @@
                 </div>
             </div>
         </div>
+        <img src="images//table.png" class="position-absolute" style="position: absolute; top: 610px; left: 0; width: 110px; z-index: -1;">
     </div>
 
 
@@ -174,6 +194,7 @@
         <h3>Được Xây Dựng Vì Lợi Ích Cộng Đồng</h3>
         <h2>KHOA HỌC NHÂN CHUYÊN MÔN</h2>
     </div>
+
     <div class="aside-bottom">
         <aside class="card-container">
             <div class="card" >
@@ -193,6 +214,7 @@
             </div>
         </aside>
     </div>
+
    
         <!-- Slider-card 1-->
     <div class="slider">
@@ -234,10 +256,14 @@
         </section>
     </div>
     
+
         <!-- Lộ Trình Khóa Học -->
-        <section class="course-roadmap">
+    <section class="course-roadmap">
             <div class="roadmap-left">
-                <h2>LỘ TRÌNH <br> KHÓA HỌC</h2>
+                <div class="logo-container">
+                    <div class="decorative-ellipse"></div>
+                    <h2>LỘ TRÌNH <br> KHÓA HỌC</h2>
+                </div>
                 <ul class="clickable-list">
                     <li data-index="1">01 Nhập môn thiết kế đồ họa</li>
                     <li data-index="2">02 Tạo hình vector</li>
@@ -254,49 +280,333 @@
                     <div class="image-item"><img src="images/ltkh3.png" alt="Roadmap 3"></div>
                     <div class="image-item"><img src="images/ltkh4.png" alt="Roadmap 4"></div>
                 </div>
-                <div class="info-box">
-                    <div class="position-absolute top-0 start-0 d-flex align-items-center justify-content-center" style="width: 15%; height: 100%; background-color: rgba(0, 0, 0, 0.358); text-align: center;margin: auto; border-radius: 50px;margin-bottom: 20px;">
-                        <i class="f-MONTSERRAT-BOL fs-1 text-white position-relative info-number" style="left: -2px;" data-bundle="1">01</i>
-                        <i class="f-MONTSERRAT-BOL fs-1 text-white position-relative info-number" style="left: -2px; display: none;" data-bundle="2">02</i>
-                        <i class="f-MONTSERRAT-BOL fs-1 text-white position-relative info-number" style="left: -2px; display: none;" data-bundle="3">03</i>
-                        <i class="f-MONTSERRAT-BOL fs-1 text-white position-relative info-number" style="left: -2px; display: none;" data-bundle="4">04</i>
-                        <i class="f-MONTSERRAT-BOL fs-1 text-white position-relative info-number" style="left: -2px; display: none;" data-bundle="5">05</i>
-                        <i class="f-MONTSERRAT-BOL fs-1 text-white position-relative info-number" style="left: -2px; display: none;" data-bundle="6">06</i>
+                <div class="info-box position-relative bg-size-100 p-4 bg-cover-sm-size-100">
+                    <div class="d-flex align-items-center">
+                        <div class="position-relative">
+                            <img class="image-circular d-sm-block d-none" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/USf3Rm1Zi5AJJXW0HERljqS7Pn1edQhxBSke8L9k.png" alt="">
+                            <div class="position-absolute top-0 start-0 d-flex align-items-center justify-content-center w-100 h-100">
+                                <i class="f-MONTSERRAT-BOL fs-1 text-white position-relative info-number active" data-bundle="1">01</i>
+                                <i class="f-MONTSERRAT-BOL fs-1 text-white position-relative info-number" data-bundle="2">02</i>
+                                <i class="f-MONTSERRAT-BOL fs-1 text-white position-relative info-number" data-bundle="3">03</i>
+                                <i class="f-MONTSERRAT-BOL fs-1 text-white position-relative info-number" data-bundle="4">04</i>
+                                <i class="f-MONTSERRAT-BOL fs-1 text-white position-relative info-number" data-bundle="5">05</i>
+                                <i class="f-MONTSERRAT-BOL fs-1 text-white position-relative info-number" data-bundle="6">06</i>
+                            </div>
+                        </div>
+                        <div class="ms-4 f-MONTSERRAT-REGULAR text-white lh-sm bundle-content info-content">
+                            <span data-content="1" class="active">Môn học khởi đầu, trang bị cho học viên những kiến thức và hiểu biết liên quan đến ngành Thiết kế đồ họa; rèn luyện kỹ năng tư duy hình ảnh sáng tạo, chính xác, phục vụ cho công đoạn lên ý tưởng, phác thảo ý tưởng.</span>
+                            <span data-content="2">Môn học trang bị cho học viên kiến thức bài bản về đồ họa vector, nguyên tắc tạo hình, dựng hình 2D và 3D, xử lý màu sắc, thao tác với chữ. Sau học phần, học viên có khả năng sử dụng thành thạo phần mềm Adobe Illustrator để tạo hình minh họa.</span>
+                            <span data-content="3">Môn học giúp học viên tiếp cận và nắm vững những kiến thức liên quan đến ảnh kỹ thuật số. Sau học phần, học viên có thể sử dụng thành thạo phần mềm Adobe Photoshop để chỉnh sửa, cắt ghép hình ảnh, blend & retouch hay tạo hiệu ứng.</span>
+                            <span data-content="4">Môn học trang bị những kiến thức về việc xử lý, sử dụng và kết hợp những yếu tố đồ họa một cách hiệu quả và có tính thẩm mỹ cao. Sau học phần, học viên sẽ được hệ thống hóa tư duy một cách khoa học nhất, và được củng cố vững chắc những kiến thức mang tính nền tảng.</span>
+                            <span data-content="5">Môn học trang bị cho học viên kiến thức nền về xử lý bố cục, thiết kế dàn trang và quy trình in ấn. Sau học phần, học viên có thể sử dụng thành thạo phần mềm Adobe InDesign để phục vụ cho việc tạo ra những ấn phẩm thực tế thông qua việc in ấn một cách hiệu quả nhất.</span>
+                            <span data-content="6">Là phần kiến thức được quan tâm nhất bởi tính ứng dụng cao, với 8 buổi lý thuyết và 12 buổi đồ án, môn học đặc biệt đề cao thực tiễn. Học viên sẽ được trực tiếp tham gia vào quy trình thiết kế thực tế một cách chuyên nghiệp và bài bản, thông qua việc ứng dụng kiến thức, kỹ năng vào đồ án cuối kỳ.</span>
+                        </div>
                     </div>
-                    <div class="info-content" data-content="1" style="display: none;">
-                        <p>Môn học khởi đầu, trang bị cho học viên những kiến thức và hiểu biết liên quan đến ngành Thiết kế đồ họa; rèn luyện kỹ năng tư duy hình ảnh sáng tạo, chính xác, phục vụ cho công đoạn lên ý tưởng, phác thảo ý tưởng.</p>
-                        <span class="duration">8 BUỔI</span>
-                        <span class="lessons">4 HỌC PHẦN</span>
+                </div>
+                <img class="custom-image position-absolute top-0 end-0 d-md-block d-none" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/jyc3v2DLJrGfNva8DKbVsWBMuc2k9Ed6Y65BwdFI.png" alt="">
+            </div>
+    </section>
+
+        <!-- Learn Something New -->
+    <section class="learn-something-new mb-5">
+            <div class="carousel-container min-h-screen bg-cover d-flex align-items-center transform-all-1s background-parallax">
+                <div class="owl-carousel carousel-parallax">
+                    <div class="item">
+                        <div class="w-100 h-100 d-flex align-items-center px-md-5 px-2">
+                            <img src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Q8hJdXBqoNRgcAjolyVnpO8VT5HDF0je0ZSzmTTk.png" alt="Slide 1">
+                        </div>
                     </div>
-                    <div class="info-content" data-content="2">
-                        <p>Môn học trang bị cho học viên kiến thức bài bản về đồ họa vector, nguyên tắc tạo hình, dựng hình 2D và 3D, xử lý màu sắc, thao tác với chữ. Sau học phần, học viên có khả năng sử dụng thành thạo phần mềm Adobe Illustrator để tạo hình minh họa.</p>
-                        <span class="duration">6 BUỔI</span>
-                        <span class="lessons">3 HỌC PHẦN</span>
+                    <div class="item">
+                        <div class="w-100 h-100 d-flex align-items-center px-md-5 px-2">
+                            <img src="https://d1j8r0kxyu9tj8.cloudfront.net/files/h7Tz0Zxows9ICOAg8pjQkVU5yKMYyS5TIpZ7LQgc.png" alt="Slide 3">
+                        </div>
                     </div>
-                    <div class="info-content" data-content="3" style="display: none;">
-                        <p>Môn học giúp học viên tiếp cận và nắm vững những kiến thức liên quan đến ảnh kỹ thuật số. Sau học phần, học viên có thể sử dụng thành thạo phần mềm Adobe Photoshop để chỉnh sửa, cắt ghép hình ảnh, blend & retouch hay tạo hiệu ứng.</p>
-                        <span class="duration">8 BUỔI</span>
-                        <span class="lessons">4 HỌC PHẦN</span>
+                    <div class="item">
+                        <div class="w-100 h-100 d-flex align-items-center justify-content-end px-md-5 px-2">
+                            <img src="https://d1j8r0kxyu9tj8.cloudfront.net/files/lj674KBE5YYq6CbOl24dloCwHrnCnhKzctY7Xf33.png" alt="Slide 4">
+                        </div>
                     </div>
-                    <div class="info-content" data-content="4" style="display: none;">
-                        <p>Môn học trang bị những kiến thức về việc xử lý, sử dụng và kết hợp những yếu tố đồ họa một cách hiệu quả và có tính thẩm mỹ cao. Sau học phần, học viên sẽ được hệ thống hóa tư duy một cách khoa học nhất, và được củng cố vững chắc những kiến thức mang tính nền tảng.</p>
-                        <span class="duration">6 BUỔI</span>
-                        <span class="lessons">3 HỌC PHẦN</span>
+                </div>
+            </div>
+    </section>
+
+
+        <!-- Phương pháp đào tạo -->
+    <section class="training-methods pt-5">
+            <div class="title-container">
+                <h4 class="f-1FTV-VIP-NEUE-POWER-ULTRA">PHƯƠNG PHÁP ĐÀO TẠO</h4>
+                <p>Với sự nghiên cứu kỹ lưỡng, colorME đã áp dụng các phương pháp đào tạo được chứng minh trên thế giới</p>
+            </div>
+            <div class="container" style="margin-top: -80px;">
+                <div class="container mt-5">
+                    <div class="training-grid rounded-20">
+                        <div class="row row-cols-3 g-0">
+                            <!-- Blended Learning -->
+                            <div class="col training-card">
+                                <img class="training-image" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/RFrs9jJfe6W0szphFfA89bkj6JkhOgvNI2eUv5vK.png" alt="Blended Learning" style="background-image: linear-gradient( to right, #dd1e1e, #de4343, #ffcccc);">
+                                <div class="card-content">
+                                    <h5 class="f-MONTSERRAT-BOLD">BLENDED LEARNING</h5>
+                                    <p>Website colorME luôn cập nhật tài liệu, giáo trình mới để học viên nghiên cứu và thực hành bất kỳ lúc nào</p>
+                                </div>
+                            </div>
+                            <!-- Micro Learning -->
+                            <div class="col training-card">
+                                <div class="card-content">
+                                    <h5 class="f-MONTSERRAT-BOLD">MICRO LEARNING</h5>
+                                    <p>Phương pháp học chia nhỏ nội dung giúp người học tiếp cận với kiến thức một cách hiệu quả nhất</p>
+                                </div>
+                                <img class="training-image" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/YNtUxuq4bD8cUhDqyGtLljkYzPJ5zZWUPFP0jC7c.png" alt="Micro Learning" style="background-image: linear-gradient( to top, #dd1e1e, #de4343, #ffcccc);">
+                            </div>
+                            <!-- Group Project -->
+                            <div class="col training-card">
+                                <img class="training-image" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/fq524iR7oRuo1C8GRdfDIJ7vTgFBTiwa1r4gLW2B.png" alt="Group Project" style="background-image: linear-gradient( to left, #dd1e1e, #de4343, #ffcccc);">
+                                <div class="card-content">
+                                    <h5 class="f-MONTSERRAT-BOLD">GROUP PROJECT</h5>
+                                    <p>Các hoạt động nhóm brainstorm, debate và pitching giúp các bạn được học hỏi và phát triển toàn diện</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="info-content" data-content="5" style="display: none;">
-                        <p>Môn học trang bị cho học viên kiến thức nền về xử lý bố cục, thiết kế dàn trang và quy trình in ấn. Sau học phần, học viên có thể sử dụng thành thạo phần mềm Adobe InDesign để phục vụ cho việc tạo ra những ấn phẩm thực tế thông qua việc in ấn một cách hiệu quả nhất.</p>
-                        <span class="duration">8 BUỔI</span>
-                        <span class="lessons">4 HỌC PHẦN</span>
-                    </div>
-                    <div class="info-content" data-content="6" style="display: none;">
-                        <p>Là phần kiến thức được quan tâm nhất bởi tính ứng dụng cao, với 8 buổi lý thuyết và 12 buổi đồ án, môn học đặc biệt đề cao thực tiễn. Học viên sẽ được trực tiếp tham gia vào quy trình thiết kế thực tế một cách chuyên nghiệp và bài bản, thông qua việc ứng dụng kiến thức, kỹ năng vào đồ án cuối kỳ.</p>
-                        <span class="duration">10 BUỔI</span>
-                        <span class="lessons">5 HỌC PHẦN</span>
+                </div>
+            </div>
+    </section>
+
+
+        <!-- Tư duy - Kiến thức - Kĩ năng - Trải nghiệm - Portfolio - Certificate -->
+        <section class="course-outcomes">
+            <div class="bg-container position-relative">
+                <img class="w-100" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/A95JWaaFsltozpcIaHYBYL0cG4gzz58C4p2PzpW2.png" alt="Background Overlay">
+                <img class="position-absolute decor-img" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/IFsSn7yWquGAb0zja7XInQwekqk6qSn2DPwfuIkP.png" alt="Decorative Image">
+                <div class="container text-center mt-5">
+                    <h4 class="f-1FTV-VIP-NEUE-POWER-ULTRA-">ĐẦU RA</h4>
+                    <a href="#pick-class" class="btn btn-course bg-white rounded-pill">Đăng ký ngay</a>
+                </div>
+                <div class="py-5">
+                    <div class="row align-items-center">
+                        <div class="col-md-8">
+                            <div class="d-flex flex-column align-items-center">
+                                <!-- Tư duy -->
+                                <div class="edge-item transform-all-speed-xl">
+                                    <div class="edge-card position-relative bg-white rounded-circle overflow-hidden">
+                                        <div class="position-absolute top-0 start-0 rounded-circle edge-bg"></div>
+                                        <img class="edge-img" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/0BBC0l6cUt8YrZtW2UP2QjyiGZjMM7Wu4Wwn1pH4.png" alt="Tư duy">
+                                        <div class="edge-content">
+                                            <p class="f-MONTSERRAT-SEMIBOLD text-uppercase">Tư duy</p>
+                                        </div>
+                                    </div>
+                                    <div class="hidden-content">Xây dựng tư duy sáng tạo đa chiều, linh hoạt và hiện đại</div>
+                                </div>
+                                <!-- Kiến thức -->
+                                <div class="edge-item transform-all-speed-xl">
+                                    <div class="edge-card position-relative bg-white rounded-circle overflow-hidden">
+                                        <div class="position-absolute top-0 start-0 rounded-circle edge-bg"></div>
+                                        <img class="edge-img" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/hbDHSYsJyUJFs0S4SE62MieHzWBdvlUMFDSSgQea.png" alt="Kiến thức">
+                                        <div class="edge-content">
+                                            <div class="f-MONTSERRAT-SEMIBOLD text-uppercase text-shadow">Kiến thức</div>
+                                        </div>
+                                    </div>
+                                    <div class="hidden-content">Sử dụng, kết hợp yếu tố đồ họa hiệu quả, có tính thẩm mỹ cao</div>
+                                </div>
+                                <!-- Kỹ năng -->
+                                <div class="edge-item transform-all-speed-xl">
+                                    <div class="edge-card position-relative bg-white rounded-circle overflow-hidden">
+                                        <div class="position-absolute top-0 start-0 rounded-circle edge-bg"></div>
+                                        <img class="edge-img" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/dF8jCcWDteOSWpYgh1c0OZpQStHpRUQTnmcWZ1eZ.png" alt="Kỹ năng">
+                                        <div class="edge-content">
+                                            <div class="f-MONTSERRAT-SEMIBOLD text-uppercase">KỸ NĂNG</div>
+                                        </div>
+                                    </div>
+                                    <div class="hidden-content">Thành thạo các phần mềm thiết kế Photoshop, Illustrator, InDesign</div>
+                                </div>
+                                <!-- Trải nghiệm -->
+                                <div class="edge-item transform-all-speed-xl">
+                                    <div class="edge-card position-relative bg-white rounded-circle overflow-hidden">
+                                        <div class="position-absolute top-0 start-0 rounded-circle edge-bg"></div>
+                                        <img class="edge-img" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/ymndtHLYNEBDSlV9PSkBfoQyuWpepzpgGp1NAeuE.png" alt="Trải nghiệm">
+                                        <div class="edge-content">
+                                            <div class="f-MONTSERRAT-SEMIBOLD text-uppercase">TRẢI NGHIỆM</div>
+                                        </div>
+                                    </div>
+                                    <div class="hidden-content">Vận dụng lý thuyết và thực hành để thiết kế bộ nhận diện thương hiệu</div>
+                                </div>
+                                <!-- Portfolio -->
+                                <div class="edge-item transform-all-speed-xl">
+                                    <div class="edge-card position-relative bg-white rounded-circle overflow-hidden">
+                                        <div class="position-absolute top-0 start-0 rounded-circle edge-bg"></div>
+                                        <img class="edge-img" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/RDyRiLrNz5hWPAyNd3wsX1rT2BQdqyNpTZiIEt7k.png" alt="Portfolio">
+                                        <div class="edge-content">
+                                            <div class="f-MONTSERRAT-SEMIBOLD text-uppercase">PORTFOLIO</div>
+                                        </div>
+                                    </div>
+                                    <div class="hidden-content">Tạo ra một loạt ấn phẩm thiết kế từ cơ bản đến chuyên nghiệp</div>
+                                </div>
+                                <!-- Certificate -->
+                                <div class="edge-item transform-all-speed-xl">
+                                    <div class="edge-card position-relative bg-white rounded-circle overflow-hidden">
+                                        <div class="position-absolute top-0 start-0 rounded-circle edge-bg"></div>
+                                        <img class="edge-img" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/N8ypCfUFZ6gqDEk4BMsBYvjJ3r7VV9M3AIVtmNt3.png" alt="Certificate">
+                                        <div class="edge-content">
+                                            <div class="f-MONTSERRAT-SEMIBOLD text-uppercase">Certificate</div>
+                                        </div>
+                                    </div>
+                                    <div class="hidden-content">Sở hữu chứng chỉ thiết kế đồ hoạ chuyên sâu sau 6 tháng</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+    
 
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="column logo">
+              <img alt="Company Logo" src="images/logo.png" />
+            </div>
+          
+            <div class="column">
+              <h3>VỀ COLORME</h3>
+              <ul>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Chính sách bảo mật</a></li>
+                <li><a href="#">Điều khoản dịch vụ</a></li>
+                <li><a href="#">Quy chế hoạt động</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Sự kiện</a></li>
+                <li><a href="#">Các cơ sở</a></li>
+                <li><a href="#">Khuyến mãi</a></li>
+                <li><a href="#">Tuyển dụng</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Việc làm</a></li>
+                <li><a href="#">Tài nguyên</a></li>
+              </ul>
+            </div>
+          
+            <div class="column">
+              <h3>KHÓA HỌC</h3>
+              <ul>
+                <li>
+                  <img alt="Photoshop Logo" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/1625488837enJ8XWYEmZtaweF.png" />
+                  <a href="#">Photoshop</a>
+                </li>
+                <li>
+                  <img alt="Illustrator Logo" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/1625488838KEpqpC1t0qjRK9T.png" />
+                  <a href="#">Illustrator</a>
+                </li>
+                <li>
+                  <img alt="After Effects Logo" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/1625488837ZIcvXTGs4g7oWFO.png" />
+                  <a href="#">After Effects</a>
+                </li>
+                <li>
+                  <img alt="Photography Logo" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/16271267630XBSYsNeQomhX9F.png" />
+                  <a href="#">Photography</a>
+                </li>
+                <li>
+                  <img alt="Premiere Logo" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/1625488838PTZZUuC1Ddrt8QV.png" />
+                  <a href="#">Premiere</a>
+                </li>
+                <li>
+                  <img alt="InDesign Logo" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/1625488837rsnQ1y68jhGvr8g.png" />
+                  <a href="#">InDesign</a>
+                </li>
+                <li>
+                  <img alt="Thiết kế chuyên sâu Logo" src="https://d2xbg5ewmrmfml.cloudfront.net/images/ipA1zIbZoqEEwVaAunZ3JaPc7SB36Img4nAjMHAn.jpg" />
+                  <a href="#">Thiết kế chuyên sâu</a>
+                </li>
+                <li>
+                  <img alt="Digital Painting - Sài Gòn Logo" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/1625488838F4qWMV6PkBblvCd.png" />
+                  <a href="#">Digital Painting - Sài Gòn</a>
+                </li>
+                <li>
+                  <img alt="PowerPoint Logo" src="https://d1j8r0kxyu9tj8.cloudfront.net/images/1517977503GcCw55GCQRIv1fk.jpg" />
+                  <a href="#">PowerPoint</a>
+                </li>
+                <li>
+                  <img alt="Thiết kế UI Logo" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/162270963773BiGjq2chRINwy.png" />
+                  <a href="#">Thiết kế UI</a>
+                </li>
+                <li>
+                  <img alt="Digital Painting - Hà Nội Logo" src="https://d2xbg5ewmrmfml.cloudfront.net/images/ObM1uUPNICHYa9bNwd9LloTDeN4j23whmne7mUDP.jpg" />
+                  <a href="#">Digital Painting - Hà Nội</a>
+                </li>
+                <li>
+                  <img alt="Trọn bộ kỹ năng Logo" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/16148352456IXMNSMgj4Ab9ye.png" />
+                  <a href="#">Trọn bộ kỹ năng</a>
+                </li>
+                <li>
+                  <img alt="UI UX Toàn Diện Logo" src="https://d2xbg5ewmrmfml.cloudfront.net/images/eU0MWMMggU6pjzxccSfCxY7HUVEO51FeK3oU5EGG.jpg" />
+                  <a href="#">UI UX Toàn Diện</a>
+                </li>
+                <li>
+                  <img alt="Thiết kế 3D Logo" src="https://d2xbg5ewmrmfml.cloudfront.net/images/psgYx8ePtZLgAix0iBw2aKVX8HYbBXczfXRfRmLK.jpg" />
+                  <a href="#">Thiết kế 3D</a>
+                </li>
+                <li>
+                  <img alt="Digital Painting Toàn Diện Logo" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/DgikqA7ifHWvJkcNUi57HZLkkrLCUiAhQ1WHtkNR.png" />
+                  <a href="#">Digital Painting Toàn Diện</a>
+                </li>
+                <li>
+                  <img alt="Birthday Buddy Logo" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/jazftUrwMQgp89Y3YJsH8tgRgrFCla64YTTSqSOa.jpg" />
+                  <a href="#">Birthday Buddy</a>
+                </li>
+                <li>
+                  <img alt="Khóa Thiết kế Đồ Họa Đa Phương Tiện Logo" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/M7JoJrDGg7LwgV9PsNsC2BKWffqnzW8hatCnpHjG.png" />
+                  <a href="#">Khóa Thiết kế Đồ Họa Đa Phương Tiện</a>
+                </li>
+                <li>
+                  <img alt="GM Pre-course 1 Logo" src="https://d2xbg5ewmrmfml.cloudfront.net/images/qb2BzbWDWGSKJUNpcFDvAQCoTuG2Ovxo8h4XGz4L.png" />
+                  <a href="#">GM Pre-course 1</a>
+                </li>
+                <li>
+                  <img alt="GM Pre-course 2 Logo" src="https://d2xbg5ewmrmfml.cloudfront.net/images/Yak1VX2u5wFKYJDwgmh98yqF83nDlOsAzAx0yqEZ.png" />
+                  <a href="#">GM Pre-course 2</a>
+                </li>
+                <li>
+                  <img alt="Canva Logo" src="https://d2xbg5ewmrmfml.cloudfront.net/images/3fPFeQqMIqz8GExHDethKf0sggwLfguenOKSaLXE.png" />
+                  <a href="#">Canva</a>
+                </li>
+                <li>
+                  <img alt="CapCut Logo" src="https://d2xbg5ewmrmfml.cloudfront.net/images/KWJSUheuzkoIBDuz6VHIFnPVRzXgLcei2f0pK6Dv.png" />
+                  <a href="#">CapCut</a>
+                </li>
+              </ul>
+            </div>
+          
+            <div class="column">
+              <h3>TÌM CHÚNG TÔI</h3>
+              <ul>
+                <li>Hotline Hà Nội - 024 3550 0333</li>
+                <li>Hotline TP.HCM - 028 3923 2888</li>
+                <li><a href="#">Facebook Fanpage Hà Nội</a></li>
+                <li><a href="#">Facebook Fanpage TP.HCM</a></li>
+                <li><a href="#">Instagram Hà Nội</a></li>
+                <li><a href="#">Instagram TP. HCM</a></li>
+                <li><a href="#">Youtube</a></li>
+                <li><a href="#">Cộng đồng thiết kế</a></li>
+                <li><a href="#">Tiktok</a></li>
+              </ul>
+              <div class="app-links">
+                <img alt="App Store" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/1614438298pUvmvqiaXbF1eA4.png" />
+                <img alt="Google Play" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/1614438295yeEDycl0E6dCNv9.png" />
+              </div>
+            </div>
+          </div>
+          
+          <div class="footer-bottom">
+            <p>CÔNG TY CỔ PHẦN KEE EDUCATION</p>
+            <p>KEE EDUCATION COMPANY LIMITED</p>
+            <p>Mã số thuế: 0106897051</p>
+            <p>Địa chỉ: Số 175, phố Chùa Láng, Phường Láng Thượng, Quận Đống Đa, Thành phố Hà Nội</p>
+            <p>Đại diện pháp luật: Nguyễn Viết Hùng</p>
+            <p>Ngày cấp giấy phép: 08/07/2015</p>
+            <p>Điện thoại: 024 3550 0333</p>
+            <p>Copyright © 2015 – 2025 KEE Education. All screenshots and videos © their respective owners.</p>
+          </div>
+          
+        
     <script src="script.js"></script>
 </body>
 </html>
