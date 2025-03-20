@@ -216,171 +216,129 @@
 
 
 
-/* Base styles for all devices */
-.top-header {
-    background-color: white;
-    padding: 1rem 0; /* Using rem for scalability */
-    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
-}
-
-.container {
+/* Thanh nav và đăng nhập */
+  
+  /* Navbar tổng */
+  .main-nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.25rem; /* 20px -> 1.25rem */
-}
-
-/* Logo styling */
-.logo img {
-    height: 3.125rem; /* 50px -> 3.125rem */
-    border-radius: 0.3125rem; /* 5px -> 0.3125rem */
-    margin-right: 2.5rem; /* 40px -> 2.5rem */
-}
-
-/* Menu styling */
-.menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 15px 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  /* Logo */
+  .main-nav-logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    right:auto;
+    margin-left: 50%;
+  }
+  
+  /* Menu chính */
+  .main-nav-menu {
     display: flex;
-}
-
-.menu ul li {
-    margin-right: 1.25rem; /* 20px -> 1.25rem */
-}
-
-.menu ul li a {
-    color: black;
+    align-items: center;
+    gap: 30px;
+    margin-right: auto;
+    padding-left: 5%;
+  }
+  
+  .main-nav-menu a {
     text-decoration: none;
-    font-size: 1.125rem; /* 18px -> 1.125rem */
-    display: inline-block;
-}
-
-.menu ul li a:hover {
-    color: #d70000;
-}
-
-/* Dropdown menu */
-.dropdown-menu {
-    display: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .main-nav-menu a:hover {
+    color: #f83f2a;
+  }
+  
+  /* Dropdown */
+  .menu-dropdown {
+    position: relative;
+  }
+  
+  .menu-dropdown-content {
     position: absolute;
-    background: white;
-    top: 1.875rem; /* 30px -> 1.875rem */
+    top: 100%;
     left: 0;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.2);
-    z-index: 1000; /* Ensure dropdown appears above other content */
-}
-
-.dropdown-menu li {
-    padding: 0.625rem; /* 10px -> 0.625rem */
-    white-space: nowrap;
-}
-
-.dropdown-menu li a {
-    color: black;
-    font-size: 0.875rem; /* 14px -> 0.875rem */
-    display: block;
-}
-
-.dropdown-menu li a:hover {
-    background: #f0f0f0;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-/* Login button */
-.login-btn a {
-    background: linear-gradient(to right, #ff7e00, #ff3b00);
-    color: white;
-    padding: 0.625rem 1.25rem; /* 10px 20px -> 0.625rem 1.25rem */
-    border-radius: 0.5rem; /* 8px -> 0.5rem */
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    border-radius: 6px;
+  }
+  
+  .menu-dropdown-content a {
+    padding: 10px 15px;
+    color: #333;
     text-decoration: none;
-    font-weight: bold;
-}
-
-.login-btn a:hover {
-    opacity: 0.8;
-}
-
-/* Mobile (up to 768px) */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        padding: 0 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .menu-dropdown-content a:hover {
+    background-color: linear-gradient(to right top #ff844b, hsl(11, 84%, 48%));
+  }
+  
+  .menu-dropdown:hover .menu-dropdown-content {
+    display: flex;
+  }
+  
+  /* Login button */
+  .main-nav-login-btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: hsl(11, 84%, 48%);
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+  }
+  
+  .main-nav-login-btn:hover {
+    background-color: #f32d27;
+  }
+  
+  /* Toggler menu mobile */
+  .main-nav-toggler {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .main-nav-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: linear-gradient(90deg, #e33e19, #ff9463);
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+      gap: 15px;
+      display: none;
     }
-
-    .logo img {
-        height: 2.5rem;
-        margin: 0.5rem 0;
+  
+    .main-nav-menu.active {
+      display: flex;
     }
-
-    .menu ul {
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
+  
+    .main-nav-toggler {
+      display: block;
+      color: #333;
     }
+  }
+  
 
-    .menu ul li {
-        margin: 0.5rem 0;
-    }
-
-    .dropdown-menu {
-        position: relative;
-        top: 0;
-        box-shadow: none;
-        width: 100%;
-    }
-
-    .login-btn a {
-        margin-top: 1rem;
-        padding: 0.5rem 1rem;
-    }
-}
-
-/* Tablet (769px - 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .container {
-        padding: 0 2rem;
-    }
-
-    .logo img {
-        height: 2.75rem;
-    }
-
-    .menu ul li {
-        margin-right: 1rem;
-    }
-
-    .menu ul li a {
-        font-size: 1rem;
-    }
-
-    .login-btn a {
-        padding: 0.5rem 1rem;
-    }
-}
-
-/* PC (1025px and above) */
-@media (min-width: 1025px) {
-    .container {
-        padding: 0 1.25rem;
-    }
-
-    .logo img {
-        height: 3.125rem;
-    }
-
-    .menu ul li {
-        margin-right: 1.25rem;
-    }
-}
 
 
 /*  Giao diện Thiết kế đồ họa */
@@ -463,8 +421,8 @@ h1 {
     color: white;
 }
 
-.subtitle img {
-    height: 40px;
+.text-container {
+    padding-left: 500px;
 }
 
 /* Tablet (màn hình từ 768px đến 1024px) */
@@ -517,6 +475,9 @@ h1 {
 
 /* Mobile (màn hình dưới 768px) */
 @media (max-width: 767px) {
+    .text-container{
+        padding-left: 0;
+    }
     .body-content {
         flex-direction: column; /* Chuyển sang bố cục dọc */
         align-items: center;
@@ -1599,6 +1560,11 @@ aside.card-container {
         text-align: center; /* Căn giữa trên mobile */
     }
 
+    .title-container p {
+        text-align: center; /* Căn giữa trên mobile */
+        padding-left: 0;
+    }
+
     .training-methods p {
         max-width: 100%; /* Điền đầy trên mobile */
         text-align: center; /* Căn giữa trên mobile */
@@ -1804,43 +1770,527 @@ aside.card-container {
     opacity: 1; /* Hiển thị nội dung khi hover */
 }
 
+
+
+
+
+/* Sản phẩm học viên */
+/* Student Products Section */
+.student-products {
+    background: linear-gradient(180deg, #DE3343 0%,#ed929b 30%, #E9E9E9 70%);
+}
+
+.container {
+    max-width: 75rem; /* 1200px */
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.py-5 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* Đảm bảo container xếp dọc */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* Intro Card */
+.intro-card {
+    background: #fff;
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem; /* Khoảng cách giữa intro-card và product-image */
+}
+
+.intro-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.title {
+    font-family: '1FTV VIP Neue Power Ultra', sans-serif;
+    font-size: 1.875rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    color: #000;
+}
+
+.description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #4a4a4a;
+}
+
+/* Product Image */
+.product-image {
+    background: #fff;
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.625rem;
+}
+
 /* Responsive */
-@media (max-width: 767px) {
-    .d-flex.flex-column.align-items-center {
-        flex-direction: column; /* Trên mobile, chuyển lại thành dọc */
+@media (max-width: 48rem) { /* 768px */
+    .intro-content {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .edge-card {
-        width: 80px; /* Giảm chiều rộng trên mobile */
-        height: 200px; /* Giảm chiều cao trên mobile */
-    }
-
-    .edge-card:hover {
-        width: 150px; /* Hình tròn nhỏ hơn trên mobile */
-        height: 150px;
-    }
-
-    .edge-content {
-        top: 50%; /* Giữ căn giữa trên mobile */
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .f-MONTSERRAT-SEMIBOLD {
-        font-size: 1rem;
-    }
-
-    .hidden-content {
-        font-size: 0.8rem;
-        margin-top: 0.5rem; /* Giảm khoảng cách trên mobile */
+    .title {
+        font-size: 1.5rem;
     }
 }
 
-@media (min-width: 768px) {
-    .row > * {
-        flex: 0 0 auto; /* Tắt chia cột mặc định để tự điều chỉnh */
+
+
+/* Why Choose Section */
+.why-choose {
+    background: #fff;
+    margin-top: 100px;
+    padding: 2rem;
+    position: relative;
+    border-radius: 50% 50% 0 0;
+}
+
+.why-choose-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -3.125rem;
+}
+
+.circular-nav {
+    position: relative;
+    width: 6.5625rem; /* 105px */
+    height: 6.5625rem;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-circular {
+    width: 5.625rem; /* 90px */
+    animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.next-slide {
+    position: absolute;
+    top: 1.5625rem;
+    transform: rotate(270deg);
+    width: 3rem;
+    height: 3rem;
+    background: #ff4d4d;
+    border-radius: 50%;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+
+.why-title {
+    font-family: '1FTV VIP Neue Power Ultra', sans-serif;
+    font-size: 1.875rem;
+    text-transform: uppercase;
+    margin: 0.5rem 0;
+}
+
+.highlight {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff0000;
+    text-transform: uppercase;
+}
+
+.why-description {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    max-width: 37.5rem; /* 600px */
+}
+
+/* Container cho row */
+.row.g-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 0;
+    max-width: 1200px;
+}
+
+/* Features Container */
+.features-container {
+    background: #fff;
+    position: relative;
+    margin-top: 3rem;
+}
+
+.container {
+    max-width: 80rem; 
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    position: relative;
+}
+
+/* Grid Layout */
+.row.g-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.col-md-4 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.col-md-8 {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+    display: contents;
+}
+
+.col-md-8 .row.g-2 {
+    display: contents;
+}
+
+.col-md-8 .col-sm-7:nth-child(1) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.col-md-8 .col-sm-5:nth-child(2) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.col-md-8 .col-sm-5:nth-child(3) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.col-md-8 .col-sm-7:nth-child(4) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+/* Feature Card */
+.feature-card {
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.feature-bg-1 {
+    background: url('https://d1j8r0kxyu9tj8.cloudfront.net/files/ra3QasBQYOAsGP0VjL1qcCqzJVUaIdNRXP2OHsTJ.png') no-repeat center/cover;
+}
+
+.feature-bg-2 {
+    background: #FFD150;
+}
+
+.feature-bg-3 {
+    background: #f1f1f1;
+}
+
+.feature-bg-4 {
+    background: #f1f1f1;
+}
+
+.feature-bg-5 {
+    background: #FFD150;
+}
+
+.feature-card p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+.feature-card img {
+    width: 100%;
+    height: auto;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-black {
+    color: #000;
+}
+
+.rounded-pill {
+    border-radius: 6.25rem;
+    overflow: hidden;
+}
+
+
+.feature-card.feature-bg-5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+}
+
+.feature-card p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 40px; /* Khoảng cách giữa "60.000+" và "300+" */
+}
+
+
+.stats div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+/* Định dạng số liệu lớn (60.000+ và 300+) */
+.stats h2 {
+    font-weight: 700; 
+    font-size: 30px; 
+    color: #000; 
+    margin-bottom: 5px; 
+}
+
+.stats p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    margin: 0; 
+}
+
+
+.me-4 {
+    margin-right: 0 !important;
+}
+
+
+
+/* Benefits Section */
+.benefits {
+    background: #fff;
+    position: relative;
+    padding: 2rem 0; /* Thêm padding để tạo không gian */
+}
+
+.decor-img {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.benefits-title {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 2rem; /* Khoảng cách dưới tiêu đề */
+}
+.benefits-title p{
+    font-size: 1.5rem;
+    margin-top: -40px;
+}
+
+.benefits-title::before {
+    content: '';
+    position: absolute;
+    height: 3.75rem;
+    width: 11.25rem;
+}
+
+/* Định dạng row g-3 để các cột xếp ngang hàng */
+.row.g-3 {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép xuống dòng trên màn hình nhỏ */
+    justify-content: center; /* Căn giữa các cột */
+    gap: 1rem;
+}
+
+/* Định dạng các cột col bên trong row g-3 */
+.row.g-3 .col {
+    flex: 0 0 19%; 
+    max-width: 20%; 
+}
+
+/* Định dạng thẻ benefit-card */
+.benefit-card {
+    padding: 1.5rem;
+    border-radius: 15px;
+    height: 90%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa nội dung bên trong */
+    text-align: center; /* Căn giữa văn bản */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Thêm bóng nhẹ */
+}
+
+.bg-gray { 
+    background: #f1f1f1; 
+}
+
+.bg-red { 
+    background: #d62a3b; 
+    color: #fff; 
+}
+
+/* Định dạng phần hình ảnh */
+.image-stack {
+    position: relative;
+    width: 110%;
+    margin-bottom: 1rem; 
+    background: #ffffff00; /* Nền trong suốt */
+}
+
+/* Định dạng hình ảnh trong image-stack */
+.image-stack img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo hình ảnh lấp đầy khung mà không méo */
+}
+
+/* Hiệu ứng zoom cho hình ảnh */
+.image-stack .zoom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: transform 0.3s ease; /* Hiệu ứng mượt mà */
+}
+
+.image-stack:hover .zoom {
+    transform: scale(1.03); /* Phóng to khi hover */
+}
+
+/* Định dạng tiêu đề h4 */
+.benefit-card h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem; 
+    margin: 0.5rem 0; /* Khoảng cách trên dưới */
+    text-align: center;
+}
+
+/* Định dạng đoạn văn p */
+.benefit-card p {
+    font-size: 0.9rem; 
+    text-align: center;
+    line-height: 1.5; /* Khoảng cách dòng */
+}
+
+/* Responsive */
+@media (max-width: 37.5rem) { /* 600px */
+    .intro-content { flex-direction: column; text-align: center; }
+    .title, .highlight { font-size: 1.5rem; }
+    .benefits-title { font-size: 2rem; }
+    .benefits-title::before { height: 2.5rem; width: 7.5rem; }
+}
+
+@media (min-width: 37.5625rem) and (max-width: 64rem) { /* 601px - 1024px */
+    .highlight { font-size: 2.5rem; }
+}
+
+
+
+/* Doanh nghiệp đồng hành */
+.partner {
+    background: linear-gradient(to right bottom,#fff6b5,#fffae4, #ffffff, #fffae4, #fff6b5, #fff07b, #fde247, #fbdd33);
+    padding: 3rem 0;
+}
+.container.text-center.my-5 {
+    padding: 2rem 0; 
+}
+
+/* Định dạng tiêu đề "Những doanh nghiệp đồng hành" */
+.partner h4 {
+    font-size: 1.5rem; 
+    font-weight: bold;
+    color: #000; 
+    position: relative;
+    margin: 0 auto; 
+}
+
+/* Định dạng đoạn mô tả bên dưới */
+.container.text-center.my-5 > div:nth-child(2) {
+    max-width: 600px;
+    margin: 0 auto; 
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .partner h4 {
+        font-size: 1.8rem; /* Giảm kích thước chữ trên màn hình nhỏ */
+    }
+
+    .partner h4::before {
+        height: 2rem; /* Giảm kích thước nền */
+        width: 6rem;
+    }
+
+    .container.text-center.my-5 > div:nth-child(2) {
+        font-size: 1rem; /* Giảm kích thước chữ mô tả */
+        max-width: 90%; /* Điều chỉnh chiều rộng trên màn hình nhỏ */
     }
 }
+
+
+.partner-logo {
+    margin: 10px;
+    height: 120px;
+    width: 100%;
+}
+
+@keyframes moveLogos {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+@keyframes moveLogosReverse {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0); }
+}
+
+
+/*  14 500 000 đ  */
+
 
 
 /*  FOOTER */

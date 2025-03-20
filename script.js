@@ -14,6 +14,11 @@ document.addEventListener("DOMContentLoaded", function() {
     // Header: Thông báo khi menu đã tải xong
     console.log("Menu đã tải xong!");
 
+    function toggleMenu() {
+        document.querySelector('.main-nav__menu').classList.toggle('active');
+      }
+      
+
     // Thêm hiệu ứng hover cho ảnh trong card, feature, feature-item, aside-bottom và image-gallery
     const images = document.querySelectorAll('.card img, .feature-image img, .feature-item img, .aside-bottom .card img, .image-item img');
     images.forEach(img => {
