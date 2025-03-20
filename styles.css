@@ -569,7 +569,7 @@ h1 {
 }
 
 .body-content-bottom img {
-    width: 1250px; 
+    width: 1200px; 
     height: 100%; 
 }
 
@@ -637,8 +637,7 @@ h1 {
 }
 
 
-
-/* Giới thiệu về khóa học Thiết kế chuyên sâu  */
+/* Khóa học Thiết kế chuyên sâu  */
 .features {
     max-width: 1500px;
     margin: 0 auto;
@@ -711,126 +710,57 @@ h1 {
 }
 /* Mobile styles */
 @media (max-width: 600px) {
-    .section {
-        padding-top: 20px;
-    }
-
-    .content-top {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .content-top h2 {
-        font-size: 24px;
-    }
-
-    .content-top p {
-        font-size: 16px;
-    }
-
-    .content-top .register-btn {
-        margin-left: 0;
-        margin-top: 20px;
-        width: 100%;
-        text-align: center;
-    }
-
     .features {
-        padding: 0 20px;
+        padding: 0 15px;
+        max-width: 100%; 
     }
 
     .feature {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: column; 
+        align-items: center; /* Căn giữa thay vì flex-start để đẹp hơn */
+        padding: 15px; 
+        margin-bottom: 15px;
+        border-radius: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     }
 
     .feature-content {
-        flex-direction: column;
-        align-items: flex-start;
+        align-items: center; 
+        text-align: center; 
+        width: 100%;
     }
 
     .feature-content h3 {
-        padding-left: 0;
+        margin-top: 0; 
+        font-size: 20px; 
+        padding-left: 0; 
     }
 
     .feature-content p {
-        width: 100%;
+        font-size: 14px; 
+        line-height: 1.4; 
+        width: 100%; 
         padding-left: 0;
     }
 
     .feature-image {
-        width: 100%;
-        height: auto;
+        flex: 0 0 auto; 
+        width: 95%;
+        height: 150px; 
+        background-size: cover; 
+        background-position: center; 
+        border-radius: 10px;
+        margin-top: 10px; 
     }
 
     .feature img {
         width: 100%;
         height: auto;
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        margin-top: 0; 
     }
 }
-
-/* Tablet styles */
-@media (min-width: 601px) and (max-width: 1024px) {
-    .section {
-        padding-top: 30px;
-    }
-
-    .content-top h2 {
-        font-size: 28px;
-    }
-
-    .content-top p {
-        font-size: 17px;
-    }
-
-    .content-top .register-btn {
-        margin-left: 20px;
-    }
-
-    .features {
-        padding: 0 30px;
-    }
-
-    .feature-content p {
-        width: 80%;
-    }
-
-    .feature img {
-        width: 80%;
-    }
-}
-
-/* PC styles */
-@media (min-width: 1025px) {
-    .section {
-        padding-top: 50px;
-    }
-
-    .content-top h2 {
-        font-size: 30px;
-    }
-
-    .content-top p {
-        font-size: 18px;
-    }
-
-    .content-top .register-btn {
-        margin-left: 50px;
-    }
-
-    .features {
-        padding: 0 40px;
-    }
-
-    .feature-content p {
-        width: 60%;
-    }
-
-    .feature img {
-        width: 500px;
-    }
-}
-
 
 
 /* Đối tượng của khóa học */
@@ -891,19 +821,19 @@ aside.card-container {
     font-size: 14px;
     line-height: 1.5;
 }
-/* Mobile (dưới 768px) */
-@media (max-width: 767px) {
+/* Mobile */
+@media (max-width: 768px) {
     .aside-top {
-        padding: 15px; /* Giảm padding trên mobile */
+        padding: 15px;
     }
 
     aside.card-container {
         flex-direction: column; /* Chuyển sang dạng cột */
-        padding: 0 10px; /* Thêm padding để tránh sát mép */
+        padding: 0 10px; 
     }
 
     .card {
-        width: 90%; /* Chiếm toàn bộ chiều rộng trên mobile */
+        width: 90%; 
         margin-bottom: 20px; /* Thêm khoảng cách giữa các card */
     }
 
@@ -1466,6 +1396,7 @@ aside.card-container {
 
 .title-container {
     text-align: center;  
+    margin-bottom: 7%;
 }
 
 .f-1FTV-VIP-NEUE-POWER-ULTRA {
@@ -1477,8 +1408,8 @@ aside.card-container {
     margin-bottom: 1rem;
 }
 .title-container p{
-    text-align: center; 
-    padding-left: 230px;
+    text-align: center;
+    padding-left: 10%;
 }
 .training-methods p {
     font-size: 1rem;
@@ -1672,16 +1603,12 @@ aside.card-container {
     display: flex;
     flex-direction: row; /* Chuyển sang nằm ngang */
     justify-content: center; /* Căn giữa theo chiều ngang */
-    align-items: flex-start; /* Đảm bảo các hình elip căn đầu hàng */
-    gap: 0; /* Loại bỏ khoảng cách giữa các hình elip */
 }
 
 .edge-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0; /* Loại bỏ margin để các hình elip sát nhau */
-    padding: 0; /* Loại bỏ padding */
 }
 
 .transform-all-speed-xl {
@@ -1689,7 +1616,7 @@ aside.card-container {
 }
 
 .edge-card {
-    width: 150px;
+    width: 160px;
     height: 380px;
     position: relative;
     border-radius: 50%;
@@ -1706,15 +1633,9 @@ aside.card-container {
 }
 
 .edge-card:hover {
-    width: 400px; /* Khi hover, chuyển thành hình tròn */
-    height: 400px; /* Chiều cao = chiều rộng để tạo hình tròn */
+    width: 350px; /* Khi hover, chuyển thành hình tròn */
+    height: 350px; /* Chiều cao = chiều rộng để tạo hình tròn */
     border-radius: 50%;
-}
-
-.edge-bg {
-    width: 100%;
-    height: 100%;
-    opacity: 0.5;
 }
 
 .edge-img {
@@ -1745,8 +1666,8 @@ aside.card-container {
 
 .f-MONTSERRAT-SEMIBOLD {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 1.25rem;
+    font-weight: 530;
+    font-size: 1.2rem;
     color: #333;
     transform: rotate(-270deg); /* Xoay chữ 270 độ ngược chiều kim đồng hồ mặc định */
     transition: opacity 0.3s ease; /* Hiệu ứng ẩn chữ */
@@ -1785,7 +1706,6 @@ aside.card-container {
 
 
 /* Sản phẩm học viên */
-/* Student Products Section */
 .student-products {
     background: linear-gradient(180deg, #DE3343 0%,#ed929b 30%, #E9E9E9 70%);
 }
@@ -2241,14 +2161,16 @@ aside.card-container {
 
 /* Doanh nghiệp đồng hành */
 .partner {
-    background: linear-gradient(to right bottom,#fff6b5,#fffae4, #ffffff, #fffae4, #fff6b5, #fff07b, #fde247, #fbdd33);
     padding: 3rem 0;
-    overflow: hidden;
+    margin-top: 15%;
+    background: linear-gradient(to right bottom, #ffffff, #ffffff,#ffffff, #ffedad, hsl(47, 100%, 71%));
 }
 .container.text-center.my-5 {
     padding: 2rem 0; 
 }
-
+.carousel-logo{
+    overflow: hidden;
+}
 /* Định dạng tiêu đề "Những doanh nghiệp đồng hành" */
 .partner h4 {
     font-size: 1.5rem; 
@@ -2309,7 +2231,6 @@ aside.card-container {
 
 
 .section-description {
-    font-family: 'Montserrat', sans-serif;
     font-size: 1.1rem;
     color: #f5bdbd;
     max-width: 600px;
@@ -2347,17 +2268,13 @@ aside.card-container {
 .pricing-card.bg-size-100 {
     background-size: cover;
     background-position: center;
-    min-height: 450px;
+    min-height: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease;
-}
-
-.pricing-card.bg-size-100:hover {
-    transform: translateY(-5px);
 }
 
 .f-1FTV-VIP-NEUE-POWER-ULTRA {
@@ -2453,7 +2370,7 @@ aside.card-container {
 }
 
 .w-100 {
-    width: 80%; 
+    width: 90%; 
     height: auto;
     display: block;
     margin: auto;
@@ -2849,7 +2766,7 @@ aside.card-container {
 
 
 /* Từ khóa tìm kiếm */
-.w-100 {
+.find {
     width: 100%;
 }
 
