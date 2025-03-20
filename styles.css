@@ -1310,128 +1310,145 @@ aside.card-container {
 
 
 /* Learn Something New */
-.learn-something-new {
-    margin-bottom: 3rem; /* Thay cho mb-5 */
+/* Định dạng section */
+.carousel-section {
+    position: relative;
+    margin-bottom: 3rem; /* mb-5 */
 }
 
-.carousel-container {
-    background-size: cover; /* Thay cho bg-cover */
-    display: flex; /* Thay cho d-flex */
-    align-items: center; /* Thay cho align-items-center */
-    transition: all 1s ease; /* Thay cho transform-all-1s */
-    background-image: url('https://d1j8r0kxyu9tj8.cloudfront.net/files/LRmxDntNJkmMYtUr30WL6XfoWkL3UAS1DqE2qAJK.png');
-    background-position: 25% 0px; /* Vị trí nền */
-}
-
-.background-parallax {
+/* Định dạng container chính với parallax */
+.min-h-screen.bg-cover.d-flex.align-items-center.transform-all-1s.background-parallax {
+    min-height: 100vh; /* min-h-screen */
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed; /* Hiệu ứng parallax */
+    display: flex;
+    align-items: center;
+    transition: all 1s ease; /* transform-all-1s */
 }
 
+/* Đảm bảo container bên trong giới hạn chiều rộng */
+.carousel-section .container {
+    width: 100%;
+    max-width: 1200px; /* Giới hạn chiều rộng tối đa */
+    margin: 0 auto;
+}
+
+/* Định dạng Owl Carousel */
+.carousel-parallax {
+    position: relative;
+}
+
+/* Định dạng mỗi item trong carousel */
 .carousel-parallax .item {
     width: 100%;
     height: 100%;
 }
 
-.carousel-parallax .item img {
-    width: 70vw; /* Kích thước ảnh */
-    height: auto;
-    object-fit: cover;
-}
-.training-card img {
+/* Định dạng container bên trong mỗi item */
+.carousel-parallax .item > div {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.w-100 {
-    width: 100%;
-}
-
-.h-100 {
-    height: 100%;
-}
-
-.d-flex {
     display: flex;
-}
-
-.align-items-center {
     align-items: center;
+    padding: 0 1rem; /* px-2 */
 }
 
-.justify-content-end {
-    justify-content: flex-end;
+/* Định dạng hình ảnh trong carousel */
+.carousel-image {
+    width: 100%;
+    max-width: 70vw; /* Giới hạn chiều rộng tối đa */
+    height: auto;
+    object-fit: contain; /* Đảm bảo hình ảnh không bị méo */
+    transition: transform 0.3s ease; /* Hiệu ứng khi hover */
 }
 
-.px-2 {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+/* Hiệu ứng hover cho hình ảnh */
+.carousel-parallax .item:hover .carousel-image {
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
 }
 
-.px-md-5 {
-    padding-left: 3rem;
-    padding-right: 3rem;
-}
-
-/* Owl Nav */
-.owl-nav {
+/* Định dạng nút điều hướng */
+.carousel-parallax .owl-nav {
     position: absolute;
     top: 50%;
-    left: 0;
-    right: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
-    pointer-events: none;
 }
 
-.owl-prev,
-.owl-next {
-    pointer-events: auto;
+.carousel-parallax .owl-prev,
+.carousel-parallax .owl-next {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 }
 
-.nav-btn {
-    width: 60px;
-    height: 60px;
-    background-color: #130909;
+.carousel-parallax .nav-btn {
+    width: 50px;
+    height: 50px;
+    background-color: #ff4d4d; /* bg-red */
     border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.nav-btn.bg-red:hover {
-    background-color: #ff4d4d;
+.carousel-parallax .nav-btn:hover {
+    transform: scale(1.1); 
 }
 
-.nav-btn svg {
-    width: 47px;
-    height: 43px;
+.carousel-parallax .nav-btn svg {
+    width: 30px;
+    height: 30px;
+}
+
+.carousel-parallax .owl-prev.disabled,
+.carousel-parallax .owl-next.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Định dạng padding trên màn hình lớn */
+@media (min-width: 768px) {
+    .carousel-parallax .item > div {
+        padding: 0 3rem; /* px-md-5 */
+    }
 }
 
 /* Responsive */
-@media (max-width: 767px) {
-    .px-md-5 {
-        padding-left: 1rem;
-        padding-right: 1rem;
+@media (max-width: 768px) {
+    .carousel-image {
+        max-width: 90vw; /* Giảm chiều rộng trên màn hình nhỏ */
     }
 
-    .carousel-parallax .item img {
-        width: 90vw; /* Tăng kích thước ảnh trên mobile */
+    .carousel-parallax .nav-btn {
+        width: 40px;
+        height: 40px;
     }
 
-    .nav-btn {
-        width: 50px;
-        height: 50px;
+    .carousel-parallax .nav-btn svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .min-h-screen.bg-cover.d-flex.align-items-center.transform-all-1s.background-parallax {
+        background-attachment: scroll; /* Tắt parallax trên mobile để tránh lag */
+        min-height: 70vh; /* Giảm chiều cao trên màn hình nhỏ */
     }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-    .carousel-parallax .item img {
-        width: 80vw;
+@media (max-width: 576px) {
+    .carousel-image {
+        max-width: 100vw; /* Chiếm toàn bộ chiều rộng trên màn hình rất nhỏ */
+    }
+
+    .carousel-parallax .item > div {
+        padding: 0 0.5rem; /* Giảm padding trên màn hình rất nhỏ */
     }
 }
 
@@ -1592,13 +1609,6 @@ aside.card-container {
     background-position: top;
     position: relative;
     padding-bottom: 3rem;
-}
-
-/* Hình nền overlay */
-.w-100 {
-    width: 100%; 
-    height: auto;
-    display: block; 
 }
 
 /* Hình trang trí */
@@ -2146,7 +2156,7 @@ aside.card-container {
 
 /* Định dạng các cột col bên trong row g-3 */
 .row.g-3 .col {
-    flex: 0 0 19%; 
+    flex: 0 0 18%; 
     max-width: 20%; 
 }
 
@@ -2174,7 +2184,7 @@ aside.card-container {
 /* Định dạng phần hình ảnh */
 .image-stack {
     position: relative;
-    width: 110%;
+    width: 100%;
     margin-bottom: 1rem; 
     background: #ffffff00; /* Nền trong suốt */
 }
@@ -2183,7 +2193,6 @@ aside.card-container {
 .image-stack img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Đảm bảo hình ảnh lấp đầy khung mà không méo */
 }
 
 /* Hiệu ứng zoom cho hình ảnh */
@@ -2229,10 +2238,12 @@ aside.card-container {
 
 
 
+
 /* Doanh nghiệp đồng hành */
 .partner {
     background: linear-gradient(to right bottom,#fff6b5,#fffae4, #ffffff, #fffae4, #fff6b5, #fff07b, #fde247, #fbdd33);
     padding: 3rem 0;
+    overflow: hidden;
 }
 .container.text-center.my-5 {
     padding: 2rem 0; 
@@ -2249,7 +2260,6 @@ aside.card-container {
 
 /* Định dạng đoạn mô tả bên dưới */
 .container.text-center.my-5 > div:nth-child(2) {
-    max-width: 600px;
     margin: 0 auto; 
     line-height: 1.5;
 }
@@ -2289,7 +2299,626 @@ aside.card-container {
 }
 
 
+
+
 /*  14 500 000 đ  */
+.pricing-section {
+    background: #fff;
+    padding: 3rem 0;
+}
+
+
+.section-description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: #f5bdbd;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.row.g-3.justify-content-center.align-items-end {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+@media (min-width: 992px) {
+
+    .col-lg-3.px-2 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+
+    .col-lg-4.px-2 {
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+}
+
+.col-lg-3.px-2,
+.col-lg-4.px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.pricing-card.bg-size-100 {
+    background-size: cover;
+    background-position: center;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.pricing-card.bg-size-100:hover {
+    transform: translateY(-5px);
+}
+
+.f-1FTV-VIP-NEUE-POWER-ULTRA {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-card .card-description {
+    font-size: 0.9rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    max-width: 100%;
+}
+
+.position-relative.pointer-events-none-all {
+    top: -70px;
+}
+
+.position-relative.pointer-events-none-all img.w-100 {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.pricing-card:hover .position-relative.pointer-events-none-all img.w-100 {
+    transform: scale(1.05);
+}
+
+.btn.btn-course.bg-white.rounded-pill.my-3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #000;
+    padding: 0.5rem 1.5rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn.btn-course.bg-white.rounded-pill.my-3:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.05);
+}
+
+.position-absolute.text-center.py-2.lh-sm.w-100.px-4 {
+    bottom: 30px;
+    left: 0;
+}
+
+.bg-black.px-4.rounded-pill.py-2.lh-sm.text-white.w-100 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    background-color: #000;
+    border: none;
+    padding: 0.5rem;
+    line-height: 1.2;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.bg-black.px-4.rounded-pill.py-2.lh-sm.text-white.w-100:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+.bg-black.px-4.rounded-pill.py-2.lh-sm.text-white.w-100.fs-2.f-MONTSERRAT-BOLD {
+    font-size: 1.5rem;
+}
+
+.logo-sm{
+    margin-top: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    text-align: center;
+}
+.pricing-left{
+    margin: 15px 0 0 15px;
+}
+
+.pricing-left-center {
+    margin-left: -130px;
+    margin-top: 25px;
+}
+
+.pricing-left-center .fs-5{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.pricing-left-center .card-description {
+    font-size: 1.8rem;
+}
+
+.w-100 {
+    width: 80%; 
+    height: auto;
+    display: block;
+    margin: auto;
+    z-index: 1; 
+}
+
+@media (max-width: 992px) {
+    .col-lg-3 {
+        flex: 0 0 100%;
+        max-width: 70%;
+        margin-bottom: 1rem;
+    }
+
+    .pricing-card.bg-size-100 {
+        min-height: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .pricing-card.bg-size-100 {
+        min-height: 350px;
+    }
+
+    .f-1FTV-VIP-NEUE-POWER-ULTRA.fs-5 {
+        font-size: 1rem;
+    }
+
+    .bg-black.px-4.rounded-pill.py-2.lh-sm.text-white.w-100.fs-2.f-MONTSERRAT-BOLD {
+        font-size: 1.2rem;
+    }
+
+    .pricing-section .h4.f-1FTV-VIP-NEUE-POWER-ULTRA {
+        font-size: 1.8rem;
+    }
+
+    .pricing-section .h4.f-1FTV-VIP-NEUE-POWER-ULTRA::before {
+        height: 2rem;
+        width: 6rem;
+    }
+}
+
+
+/* Thanh toán trả góp */
+.installment-section {
+    background: #fff;
+    position: relative;
+}
+
+.installment-section .position-absolute.top-0.start-0 {
+    width: 100px;
+}
+
+.installment-section .h3.f-1FTV-VIP-NEUE-POWER-ULTRA {
+    font-family: '1FTV VIP Neue Power Ultra', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.installment-section .h3.f-1FTV-VIP-NEUE-POWER-ULTRA::before {
+    content: '';
+    position: absolute;
+    background: #FFD150;
+    height: 3rem;
+    width: 9rem;
+    border-radius: 50%;
+    top: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%) rotate(337deg);
+    z-index: -1;
+}
+
+.installment-section .section-description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: #333;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.row.row-cols-md-3.mt-4.text-center.gx-md-5.g-2 {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    gap: 3rem;
+    max-width: 30%;
+}
+
+.row.row-cols-md-3.mt-4.text-center.gx-md-5.g-2 .col {
+    flex: 1 0 100%;
+}
+
+.step-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.step-image:hover {
+    transform: scale(1.05);
+}
+
+.text-center{
+    text-align: center;
+    margin-top: -200px;
+}
+
+.f-MONTSERRAT-BOLD.fs-5.my-2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+.f-MONTSERRAT-REGULAR {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+.text-start.mt-md-5.mt-4.mb-5.bg-gray.rounded-20.p-4 {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .text-start.mt-md-5.mt-4.mb-5.bg-gray.rounded-20.p-4 {
+        margin-top: 3rem;
+    }
+}
+
+.f-svn-gilroy-semiBold.fs-5.mb-2.text-red {
+    font-family: 'SVN-Gilroy', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ff4d4d;
+    margin-bottom: 0.5rem;
+}
+
+.list-disc.ms-4.f-svn-gilroy-light {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    font-family: 'SVN-Gilroy', sans-serif;
+    font-weight: 300;
+    color: #333;
+    line-height: 1.6;
+}
+
+.list-disc.ms-4.f-svn-gilroy-light li {
+    margin-bottom: 0.5rem;
+}
+
+.list-disc.ms-4.f-svn-gilroy-light span {
+    font-weight: 500;
+}
+
+@media (max-width: 576px) {
+    .installment-section .h3.f-1FTV-VIP-NEUE-POWER-ULTRA {
+        font-size: 1.8rem;
+    }
+
+    .installment-section .h3.f-1FTV-VIP-NEUE-POWER-ULTRA::before {
+        height: 2rem;
+        width: 6rem;
+    }
+
+    .installment-section .section-description {
+        font-size: 0.9rem;
+    }
+
+    .f-MONTSERRAT-BOLD.fs-5.my-2 {
+        font-size: 1rem;
+    }
+
+    .f-MONTSERRAT-REGULAR {
+        font-size: 0.8rem;
+    }
+
+    .f-svn-gilroy-semiBold.fs-5.mb-2.text-red {
+        font-size: 1rem;
+    }
+
+    .list-disc.ms-4.f-svn-gilroy-light {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+/* Các cơ sở Color Me */
+.location-top {
+    margin-left: 7%;
+}
+.landing-title{
+    margin-left: 3rem;
+    font-size: 1.7rem;
+}
+.nav.nav-pills {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.nav.nav-pills li {
+    display: inline-block;
+}
+
+.btn.btn-register.rounded-pill.btn-success {
+    font-size: 0.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    background-color: #9d9d9d;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn.btn-register.rounded-pill.btn-success.active {
+    background-color: #2cd052; /* Màu xanh lá cây cho trạng thái active */
+}
+
+.btn.btn-register.rounded-pill.btn-success:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 576px) {
+    .nav.nav-pills {
+        gap: 0.5rem;
+    }
+
+    .btn.btn-register.rounded-pill.btn-success {
+        font-size: 0.9rem;
+        padding: 0.4rem 1rem;
+    }
+}
+
+.tab-pane.active {
+    padding: 2rem 0;
+}
+
+.facility-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #000;
+    text-align: left;
+    margin-left: 2rem;
+    margin-top: -1%;
+    margin-bottom: -2%;
+}
+
+.row.mt-5.mb-4 {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center; /* Căn giữa các cột */
+}
+
+.col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 45%; /* Giảm chiều rộng xuống 45% */
+        max-width: 45%;
+        margin: 0 auto; /* Căn giữa cột */
+    }
+}
+
+.location-bottom{
+    margin: 0 7%;
+}
+
+.product-item {
+    padding: 1.5rem;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.course-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+}
+
+.media-object.rounded-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.course-link:hover .media-object.rounded-circle {
+    transform: scale(1.1);
+}
+
+.card-title {
+    display: inline;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #000;
+}
+
+.class-item-info {
+    margin-top: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.class-item-info .mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.class-item-info strong {
+    font-weight: 600;
+    color: #000;
+}
+
+.btn.btn-course-register.btn-success {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    background-color: #2cd052;
+    color: #fff;
+    border: none;
+    align-self: flex-end;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn.btn-course-register.btn-success:hover {
+    background-color: #13b739;
+    transform: scale(1.05);
+}
+
+@media (max-width: 576px) {
+    .facility-title {
+        font-size: 1.25rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .class-item-info {
+        font-size: 0.8rem;
+    }
+
+    .btn.btn-course-register.btn-success {
+        font-size: 0.8rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .product-item {
+        padding: 1rem;
+    }
+}
+
+
+
+/* Từ khóa tìm kiếm */
+.w-100 {
+    width: 100%;
+}
+
+.container.py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+
+.h3.mb-4.fw-bold.d-flex.justify-content-between {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.keyword-title {
+    font-family: '1FTV VIP Neue Power Ultra', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.keyword-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.keyword-item {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+    background-color: #f5f5f5;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .keyword-item {
+        padding: 0.5rem 1.5rem;
+    }
+}
+
+.keyword-item:hover {
+    background-color: #e0e0e0;
+    color: #333;
+    transform: scale(1.05);
+}
+
+.first-letter-capitalize {
+    text-transform: capitalize;
+}
+
+@media (max-width: 576px) {
+    .keyword-title {
+        font-size: 1.5rem;
+    }
+
+    .keyword-item {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .keyword-list {
+        gap: 0.5rem;
+    }
+}
 
 
 
