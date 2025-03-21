@@ -1,5 +1,6 @@
 .body {
     font-family: 'Novia Regular', serif;
+
 }
 
 /* Sale chương trình học toàn diện */
@@ -93,6 +94,80 @@
     align-items: center; 
     padding-right: 50px;
 }
+
+@media (max-width: 767px) {
+    .top-header {
+        flex-direction: column; /* Chuyển sang cột để tiết kiệm không gian */
+        padding: 8px 10px; /* Giảm padding */
+        text-align: center; /* Căn giữa nội dung */
+    }
+
+    .left h1 {
+        font-size: 20px; /* Giảm kích thước chữ tiêu đề */
+        margin: 5px 0; /* Giảm margin */
+    }
+
+    .new-badge {
+        padding: 2px 6px; /* Giảm padding */
+        font-size: 10px; /* Giảm kích thước chữ */
+    }
+
+    .right {
+        flex-direction: column; /* Chuyển sang cột */
+        gap: 10px; /* Giảm khoảng cách giữa các phần tử */
+        width: 100%; /* Đảm bảo chiếm toàn chiều rộng */
+    }
+
+    .price {
+        padding-right: 0; /* Xóa padding phải */
+        text-align: center; /* Căn giữa giá */
+    }
+
+    .discount-price {
+        font-size: 16px; /* Giảm kích thước chữ */
+    }
+
+    .original-price {
+        font-size: 12px; /* Giảm kích thước chữ */
+    }
+
+    .countdown {
+        gap: 3px; /* Giảm khoảng cách giữa các time-box */
+        justify-content: center; /* Căn giữa countdown */
+    }
+
+    .time-box {
+        padding: 3px; /* Giảm padding */
+    }
+
+    .time-box span {
+        font-size: 14px; /* Giảm kích thước chữ */
+    }
+
+    .cta-btn {
+        padding: 6px 12px; /* Giảm padding */
+        font-size: 12px; /* Giảm kích thước chữ */
+    }
+
+    .close-btn {
+        top: 3px; /* Giảm khoảng cách từ trên */
+        right: 5px; /* Giảm khoảng cách từ phải */
+        font-size: 16px; /* Giảm kích thước */
+    }
+
+    .price-countdown-container {
+        flex-direction: column; /* Giữ cột */
+        align-items: center; /* Căn giữa */
+    }
+
+    .price-countdown {
+        padding-right: 0; /* Xóa padding phải */
+        flex-direction: column; /* Chuyển sang cột */
+        align-items: center; /* Căn giữa */
+    }
+}
+
+
 
 /* THANH Menu đen */
 .top-menu {
@@ -303,6 +378,11 @@
   .main-nav-login-btn:hover {
     background-color: #f32d27;
   }
+  @media (max-width: 767px) {
+    .main-nav-login-btn {
+        display: none;
+    }
+}
   
   /* Toggler menu mobile */
   .main-nav-toggler {
@@ -353,6 +433,7 @@
 /* Mặc định cho PC */
 .content-left {
     max-width: 30%;
+    padding-left: 100px;
 }
 
 .image-container {
@@ -433,7 +514,8 @@ h1 {
     }
 
     .content-left {
-        max-width: 40%; /* Tăng chiều rộng để cân đối */
+        max-width: 40%;
+        padding-left: 0; /* Tăng chiều rộng để cân đối */
     }
 
     .logo {
@@ -839,7 +921,6 @@ aside.card-container {
 
     .card img {
         align-items: center;
-        max-width: 80%; /* Đảm bảo ảnh không vượt quá container */
         height: auto;
     }
 }
@@ -888,7 +969,6 @@ aside.card-container {
     max-width: 1500px;
     margin: 40px auto;
     overflow: hidden;
-    padding-top: 50px;
 }
 
 .slider {
@@ -1131,97 +1211,117 @@ aside.card-container {
 }
 
 
-
 /* Mobile (dưới 768px) */
 @media (max-width: 767px) {
     .course-roadmap {
         flex-direction: column;
-        height: auto; /* Chiều cao tự động để tránh ép buộc */
-        margin: 20px 15px;
-        padding: 15px;
+        height: auto;
+        margin: 10px 5px;
+        padding: 5px;
     }
 
     .roadmap-left {
         flex: 100%;
         padding-right: 0;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .roadmap-left h2 {
-        font-size: 40px; /* Giảm kích thước chữ cho mobile */
+        font-size: 28px;
+        margin-top: -5px;
+        line-height: 1.1;
     }
 
     .clickable-list li {
-        font-size: 20px; /* Giảm kích thước chữ */
+        font-size: 16px;
+        margin-bottom: 8px;
+        padding-left: 15px;
+    }
+
+    .clickable-list li.active {
+        padding: 5px 5px 5px 15px;
+        border-radius: 8px;
     }
 
     .roadmap-right {
         flex: 100%;
-        border-radius: 20px; /* Giảm độ cong cho mobile */
+        border-radius: 10px;
     }
 
     .image-gallery {
-        flex-direction: column; /* Xếp ảnh theo cột */
         height: auto;
         padding-top: 0;
-    }
-
-    .info-box {
-        padding: 10px;
-        border-radius: 20px;
-        position: relative;
-        padding-bottom: 0; /* Chuyển sang relative để không đè nội dung */
-    }
-
-    .info-box .info-number {
-        font-size: 30px; /* Giảm kích thước cho mobile */
-    }
-}
-
-/* Tablet (768px - 1023px) */
-@media (min-width: 768px) and (max-width: 1023px) {
-    .course-roadmap {
-        margin: 30px 20px;
-        height: auto;
-    }
-
-    .roadmap-left {
-        flex: 0 0 40%;
-    }
-
-    .roadmap-left h2 {
-        font-size: 50px;
-    }
-
-    .clickable-list li {
-        font-size: 22px;
-    }
-
-    .roadmap-right {
-        flex: 0 0 60%;
+        gap: 3px;
+        flex-wrap: wrap; /* Cho phép ảnh xuống dòng */
     }
 
     .image-item img {
-        max-width: 200px;
+        max-width: 100px; /* Giảm kích thước ảnh nhỏ hơn nữa */
+        border-radius: 5px;
     }
 
     .info-box {
-        padding: 12px;
-    }
-}
-
-/* PC (1024px trở lên) */
-@media (min-width: 1024px) {
-    .course-roadmap {
-        margin: 50px auto;
+        display: none;
     }
 
-    .roadmap-left {
-        flex: 0 0 30%;
+    .info-box .info-number {
+        font-size: 20px;
     }
 
-    .roadmap-right {
-        flex: 0 0 60%;
+    .info-box .image-circular {
+        width: 40px;
+    }
+
+    .info-box .bundle-content {
+        margin-left: 0.3rem;
+        font-size: 12px;
+    }
+
+    /* Tối ưu slider và card */
+    .slider-container {
+        margin: 10px auto;
+        max-width: 100%;
+    }
+
+    .feature-item {
+        width: 120px; /* Giảm kích thước card nhỏ hơn nữa */
+        padding: 8px; /* Giảm padding */
+        margin-right: 5px;
+        border-radius: 8px; /* Giảm độ cong */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Giảm bóng để nhẹ hơn */
+    }
+
+    .feature-item img {
+        width: 100%;
+        max-width: 120px; /* Giảm kích thước ảnh trong card */
+        height: 90px; /* Giảm chiều cao ảnh */
+        margin-bottom: 5px;
+        padding: 0;
+        border-radius: 50%; /* Giữ hình tròn nếu muốn */
+    }
+
+    .feature-item h3 {
+        font-size: 12px; /* Giảm kích thước chữ */
+        margin: 3px 0;
+    }
+
+    .feature-item p {
+        font-size: 10px;
+        line-height: 1.2;
+    }
+
+    .arrow {
+        font-size: 14px; /* Giảm kích thước mũi tên */
+        width: 20px; /* Giảm kích thước ô chứa */
+        height: 20px;
+    }
+
+    .arrow.left {
+        left: 3px;
+    }
+
+    .arrow.right {
+        right: 3px;
     }
 }
 
@@ -1232,7 +1332,7 @@ aside.card-container {
     height: 60px;
     width: 185px;
     border-radius: 100%;
-    top: 3175px; /* Có thể cần điều chỉnh tùy ngữ cảnh */
+    top: 2650px; /* Có thể cần điều chỉnh tùy ngữ cảnh */
     left: 100px;
     transform: rotate(337deg);
     z-index: -1;
@@ -1850,6 +1950,11 @@ aside.card-container {
     text-transform: uppercase;
     margin: 0.5rem 0;
 }
+@media (max-width: 768px) {
+    .why-title {
+        font-size: 1rem;
+    }
+}
 
 .highlight {
     font-family: 'Montserrat', sans-serif;
@@ -2079,6 +2184,13 @@ aside.card-container {
     flex: 0 0 18%; 
     max-width: 20%; 
 }
+@media (max-width: 768px) {
+    .row.g-3 .col {
+        flex: none; /* Xóa flex */
+        max-width: 100%; /* Đặt lại max-width cho phù hợp với mobile */
+        margin-bottom: 10%;
+    }
+}
 
 /* Định dạng thẻ benefit-card */
 .benefit-card {
@@ -2150,6 +2262,7 @@ aside.card-container {
     .title, .highlight { font-size: 1.5rem; }
     .benefits-title { font-size: 2rem; }
     .benefits-title::before { height: 2.5rem; width: 7.5rem; }
+    
 }
 
 @media (min-width: 37.5625rem) and (max-width: 64rem) { /* 601px - 1024px */
@@ -2201,6 +2314,7 @@ aside.card-container {
         font-size: 1rem; /* Giảm kích thước chữ mô tả */
         max-width: 90%; /* Điều chỉnh chiều rộng trên màn hình nhỏ */
     }
+    
 }
 
 
@@ -2467,6 +2581,11 @@ aside.card-container {
     flex: 1 0 100%;
 }
 
+@media (max-width: 767px) {
+    .row.row-cols-md-3.mt-4.text-center.gx-md-5.g-2 {
+        gap: 1rem; /* Giảm gap xuống 1rem trên mobile */
+    }
+}
 .step-image {
     width: 100%;
     height: auto;
