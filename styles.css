@@ -1027,6 +1027,8 @@ aside.card-container {
 }
 
 
+
+
 /* Lộ Trình Khóa Học */
 .course-roadmap {
     max-width: 1200px;
@@ -1053,6 +1055,19 @@ aside.card-container {
     margin-top: -18px;
     line-height: 1.2;
 }
+
+@media (max-width: 576px) {
+    .roadmap-left {
+        flex: 0 0 100%; 
+        padding-right: 0; 
+        text-align: center; 
+    }
+
+    .roadmap-left h2 {
+        margin-top: 0; 
+    }
+}
+
 
 /* Danh sách clickable */
 .clickable-list {
@@ -1247,8 +1262,6 @@ aside.card-container {
     .image-gallery {
         height: auto;
         padding-top: 0;
-        gap: 3px;
-        flex-wrap: wrap; /* Cho phép ảnh xuống dòng */
     }
 
     .image-item img {
@@ -1328,7 +1341,7 @@ aside.card-container {
     height: 60px;
     width: 185px;
     border-radius: 100%;
-    top: 2650px; /* Có thể cần điều chỉnh tùy ngữ cảnh */
+    top: 2700px; /* Có thể cần điều chỉnh tùy ngữ cảnh */
     left: 100px;
     transform: rotate(337deg);
     z-index: -1;
