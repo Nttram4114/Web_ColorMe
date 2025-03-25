@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     
 </head>
 <body>
@@ -215,45 +217,117 @@
 
    
         <!-- Slider-card 1-->
-    <div class="slider">
-        <section class="slider-container">
-            <div class="arrow left" onclick="scrollSlider(-1)">&#10094;</div>
-            <div class="slider">
-                <div class="feature-item">
-                    <img src="images/lc1.png" alt="Lý Thuyết Căn Bản">
-                    <h3>LÝ THUYẾT CĂN BẢN TRONG TA</h3>
-                    <p>Hiểu rõ quy trình làm việc quan trọng để làm việc nhóm, thiết kế typography, brochure, màu sắc hay branding.</p>
+        <div class="position-relative py-5 card-carousel-curved px-2 overflow-hidden">
+            <div class="owl-carousel owl-carousel-curved">
+                <!-- Item 1 -->
+                <div class="item h-100">
+                    <div class="bg-white rounded-30 overflow-hidden px-4 py-2 h-100">
+                        <div class="position-relative overflow-hidden">
+                            <div class="bg-curved-active position-absolute start-0 w-100 h-100" style="z-index: 1; top: -1px;"></div>
+                            <img class="w-100 position-relative" style="z-index: 3;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Ggki50iMgCSz1geQgktrnyrzIsm0QZSaBxPduiUD.png" alt="">
+                            <img class="position-absolute top-10 start-0" style="z-index: 2; height: 99%;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/uqPaqpvRACJlhSC5ivesJrDPs1AfzvV3yHc7tTQJ.png" alt="">
+                        </div>
+                        <div class="fw-bold f-MONTSERRAT-BOLD lh-sm my-2">LÝ THUYẾT CĂN BẢN TRỌNG TÂM</div>
+                        <div class="f-MONTSERRAT-REGULAR lh-sm mb-2">
+                            Học kiến thức nền tảng quan trọng từ quy luật cảm thụ thị giác, typography đến bố cục, màu sắc hay branding
+                        </div>
+                    </div>
                 </div>
-                <div class="feature-item">
-                    <img src="images/lc2.png" alt="Đồ Thần Tạo Công Cụ Thiết Kế">
-                    <h3>ĐỒ THẦN TẠO CÔNG CỤ THIẾT KẾ</h3>
-                    <p>Khái thác tối đa sức mạnh của những phần mềm như Photoshop, Illustrator, InDesign trong quá trình thiết kế.</p>
+                <!-- Item 2 -->
+                <div class="item h-100">
+                    <div class="bg-white rounded-30 overflow-hidden px-4 py-2 h-100">
+                        <div class="position-relative overflow-hidden">
+                            <div class="bg-curved-active position-absolute start-0 w-100 h-100" style="z-index: 1; top: -1px;"></div>
+                            <img class="w-100 position-relative" style="z-index: 3;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Ggki50iMgCSz1geQgktrnyrzIsm0QZSaBxPduiUD.png" alt="">
+                            <img class="position-absolute top-10 start-0" style="z-index: 2; height: 99%;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/9vMbq7G9FdPamuK9o6QT0cAIeePpjoBbPhPTJTG0.png" alt="">
+                        </div>
+                        <div class="fw-bold f-MONTSERRAT-BOLD lh-sm my-2">ĐỘ THÀNH TẠO CÔNG CỤ THIẾT KẾ</div>
+                        <div class="f-MONTSERRAT-REGULAR lh-sm mb-2">
+                            Khai thác tối đa sức mạnh của những phần mềm như Photoshop, Illustrator, InDesign trong quá trình thiết kế
+                        </div>
+                    </div>
                 </div>
-                <div class="feature-item">
-                    <img src="images/lc3.png" alt="Phương Pháp Học Đa Ngành">
-                    <h3>PHƯƠNG PHÁP HỌC ĐA NGÀNH</h3>
-                    <p>Ứng dụng phương pháp, kỹ thuật, định hướng để kết nối tài nguyên cá nhân, các lĩnh vực sáng tạo khác nhau.</p>
+                <!-- Item 3 -->
+                <div class="item h-100">
+                    <div class="bg-white rounded-30 overflow-hidden px-4 py-2 h-100">
+                        <div class="position-relative overflow-hidden">
+                            <div class="bg-curved-active position-absolute start-0 w-100 h-100" style="z-index: 1; top: -1px;"></div>
+                            <img class="w-100 position-relative" style="z-index: 3;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Ggki50iMgCSz1geQgktrnyrzIsm0QZSaBxPduiUD.png" alt="">
+                            <img class="position-absolute top-10 start-0" style="z-index: 2; height: 99%;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Bh56KqA82tySOKAqyeQXxgmHZQrr1HDBACyzL6uo.png" alt="">
+                        </div>
+                        <div class="fw-bold f-MONTSERRAT-BOLD lh-sm my-2">PHƯƠNG PHÁP HỌC ĐA DẠNG</div>
+                        <div class="f-MONTSERRAT-REGULAR lh-sm mb-2">
+                            Ứng dụng phương pháp nghiên cứu thị giác, phân tích, đánh giá và tổng kết để sáng tạo những cái mới, cái riêng
+                        </div>
+                    </div>
                 </div>
-                <div class="feature-item">
-                    <img src="images/lc4.png" alt="Lộ Trình Mạng Tình Ứng Dụng Cao">
-                    <h3>LỘ TRÌNH MẠNG TÌNH ỨNG DỤNG CAO</h3>
-                    <p>Làm việc với các case study và brief thực tế, cung cấp các kiến thức về sử dụng các công cụ chuyên môn.</p>
+                <!-- Item 4 -->
+                <div class="item h-100">
+                    <div class="bg-white rounded-30 overflow-hidden px-4 py-2 h-100">
+                        <div class="position-relative overflow-hidden">
+                            <div class="bg-curved-active position-absolute start-0 w-100 h-100" style="z-index: 1; top: -1px;"></div>
+                            <img class="w-100 position-relative" style="z-index: 3;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Ggki50iMgCSz1geQgktrnyrzIsm0QZSaBxPduiUD.png" alt="">
+                            <img class="position-absolute top-10 start-0" style="z-index: 2; height: 99%;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/TTscE6rWbxMRF2zoqJMTzoQFjmqD0Pchn2dqnAHm.png" alt="">
+                        </div>
+                        <div class="fw-bold f-MONTSERRAT-BOLD lh-sm my-2">LỘ TRÌNH MANG TÍNH ỨNG DỤNG CAO</div>
+                        <div class="f-MONTSERRAT-REGULAR lh-sm mb-2">
+                            Làm việc với case study và brief thực tế, cùng quá trình feedback và sự hướng dẫn của giảng viên chuyên môn
+                        </div>
+                    </div>
                 </div>
-                <div class="feature-item">
-                    <img src="images/lc5.png" alt="Môi Trường Học Giàu Cảm Hứng">
-                    <h3>MÔI TRƯỜNG HỌC GIÀU CẢM HỨNG</h3>
-                    <p>Tham gia học cùng nguồn tài liệu soạn thảo đầy đủ từ đội ngũ đào tạo để tối đa trải nghiệm.</p>
+                <!-- Item 5 -->
+                <div class="item h-100">
+                    <div class="bg-white rounded-30 overflow-hidden px-4 py-2 h-100">
+                        <div class="position-relative overflow-hidden">
+                            <div class="bg-curved-active position-absolute start-0 w-100 h-100" style="z-index: 1; top: -1px;"></div>
+                            <img class="w-100 position-relative" style="z-index: 3;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Ggki50iMgCSz1geQgktrnyrzIsm0QZSaBxPduiUD.png" alt="">
+                            <img class="position-absolute top-10 start-0" style="z-index: 2; height: 99%;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/tmjs5WmXZNGqnDeIRV9OOtF9EAB7KZmnRvMoNJZO.png" alt="">
+                        </div>
+                        <div class="fw-bold f-MONTSERRAT-BOLD lh-sm my-2">MÔI TRƯỜNG HỌC GIÀU CẢM HỨNG</div>
+                        <div class="f-MONTSERRAT-REGULAR lh-sm mb-2">
+                            Tham gia học cùng những người có chung mục tiêu, định hướng, dưới sự hỗ trợ của đội ngũ đào tạo trẻ trung
+                        </div>
+                    </div>
                 </div>
-                <div class="feature-item">
-                    <img src="images/lc6.png" alt="Môi Trường Học Giàu Cảm Hứng">
-                    <h3>SỰ TƯ VẤN & HỖ TRỢ NHIỆT TÌNH</h3>
-                    <p>Được giải đáp mọi thắc mắc, băn khoăn dù là nhỏ nhất bởi đội ngũ giảng viên, trợ giảng trong suốt quá trình học.</p>
+                <!-- Item 6 -->
+                <div class="item h-100">
+                    <div class="bg-white rounded-30 overflow-hidden px-4 py-2 h-100">
+                        <div class="position-relative overflow-hidden">
+                            <div class="bg-curved-active position-absolute start-0 w-100 h-100" style="z-index: 1; top: -1px;"></div>
+                            <img class="w-100 position-relative" style="z-index: 3;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Ggki50iMgCSz1geQgktrnyrzIsm0QZSaBxPduiUD.png" alt="">
+                            <img class="position-absolute top-10 start-0" style="z-index: 2; height: 99%;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/OQDWxfWsj7WLIyDYjP26LTp8vrUFr1zjoU4Dm2J0.png" alt="">
+                        </div>
+                        <div class="fw-bold f-MONTSERRAT-BOLD lh-sm my-2">SỰ TƯ VẤN & HỖ TRỢ NHIỆT TÌNH</div>
+                        <div class="f-MONTSERRAT-REGULAR lh-sm mb-2">
+                            Được giải đáp mọi thắc mắc, băn khoăn dù là nhỏ nhất bởi đội ngũ giảng viên, trợ giảng trong suốt quá trình học
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="arrow right" onclick="scrollSlider(1)">&#10095;</div>
-        </section>
-    </div>
-    
+            <!-- Navigation Buttons -->
+            <div class="owl-nav">
+                <button type="button" class="owl-prev">
+                    <div class="nav-btn prev-slide rounded-circle shadow bg-white logo-lg d-flex align-items-center justify-content-center bg-red">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="47" height="43" viewBox="0 0 47 43" fill="none">
+                            <path d="M22.2354 2.96094C21.0817 9.12094 11.6337 21.4299 2.60547 21.416" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M22.0933 39.9827C20.9964 33.8192 13.577 21.4841 2.63374 21.4672" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M2.6445 21.4264L44.1226 21.5542" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                </button>
+                <button type="button" class="owl-next">
+                    <div class="nav-btn next-slide rounded-circle shadow bg-white logo-lg d-flex align-items-center justify-content-center bg-red">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="47" height="43" viewBox="0 0 47 43" fill="none">
+                            <path d="M24.7646 3.27734C25.9183 9.43735 35.3663 21.7463 44.3945 21.7324" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M24.9069 40.2988C26.0038 34.1353 33.4231 21.8003 44.3664 21.7834" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M44.3554 21.7428L2.87738 21.8706" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+
 
         <!-- Lộ Trình Khóa Học -->
     <section class="course-roadmap">
