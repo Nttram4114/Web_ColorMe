@@ -1,9 +1,11 @@
-.body {
-    font-family: 'Novia Regular', serif;
-
+body{
+    font-family: 'Be Vietnam', sans-serif;
+    font-size: 1rem;
+    margin: 0;
 }
 
-/* Sale chương trình học toàn diện */
+
+/* THIẾT KẾ ĐỒ HỌA ĐA PHƯƠNG TIỆN */
 .top-header {
     display: flex;
     justify-content: space-between;
@@ -94,6 +96,7 @@
     align-items: center; 
     padding-right: 50px;
 }
+
 
 @media (max-width: 767px) {
     .top-header {
@@ -408,7 +411,7 @@
 
 
 
-/*  Giao diện Thiết kế đồ họa */
+/*  Thiết kế đồ họa chuyên sâu */
 .body-content {
     display: flex;
     align-items: center;
@@ -496,6 +499,7 @@ h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400; /* Regular weight */
 }
+
 
 /* Ẩn ở màn hình lớn hơn hoặc bằng sm (small - 576px) */
 @media (min-width: 576px) {
@@ -716,6 +720,7 @@ h1 {
     max-width: 1500px;
     margin: 0 auto;
     padding: 0px 40px;
+    margin-bottom: 3.5rem;
 }
 
 .feature {
@@ -760,11 +765,6 @@ h1 {
     padding-left: 40px;
 }
 @media (max-width: 600px) {
-    .feature-content {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
     .feature-content h3 {
         padding-left: 0;
     }
@@ -800,23 +800,24 @@ h1 {
 /* Mobile styles */
 @media (max-width: 768px) {
     .features {
-        padding: 0 15px;
-        max-width: 100%; 
+        padding: 0;
+        width: 100%; 
+        align-items: center; /* Căn giữa thay vì flex-start để đẹp hơn */
     }
 
     .feature {
         flex-direction: column; 
         align-items: center; /* Căn giữa thay vì flex-start để đẹp hơn */
         padding: 15px; 
-        margin-bottom: 15px;
-        border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        margin-bottom: 0;
+        border-radius: 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     .feature-content {
-        align-items: center; 
         text-align: center; 
         width: 100%;
+        flex-direction: column;
     }
 
     .feature-image {
@@ -839,24 +840,34 @@ h1 {
     .content-top .register-btn{
        display:none;
     }
+    .feature-image .img2{
+        padding-left: 0;
+    }
 }
 
 /* Đối tượng của khóa học */
+.aside {
+    background-image: url('images/bg-ombre.png');
+    background-size: cover; /* Hình ảnh phủ toàn bộ phần tử */
+    background-position: center; /* Căn giữa hình ảnh */
+    background-repeat: no-repeat;
+}
 .aside-top {
     padding: 20px;
     text-align: center;
-    background: linear-gradient(to right, #eb2323, #ff4d4dc0);
 }
 
 .aside-top h3{
     margin: 0;
     font-size: 24px;
+    color: white;
 }
 
 .aside-top h2 {
-    margin: 5px 0;
+    margin: 10px 0;
     font-size: 28px;
     font-weight: bold;
+    color: white;
 }
 
 .aside-bottom {
@@ -912,7 +923,8 @@ aside.card-container {
 
     .card {
         width: 90%; 
-        margin-bottom: 20px; /* Thêm khoảng cách giữa các card */
+        margin-bottom: -22px; /* Thêm khoảng cách giữa các card */
+        border-radius: 0;
     }
 
     .card img {
@@ -959,8 +971,12 @@ aside.card-container {
 
 
 /* List-card  */
-/* Đảm bảo font Montserrat được sử dụng */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+.card-carousel-curved {
+    width: 100%;
+    position: relative;
+    padding: 40px 10px;
+    overflow: hidden;
+}
 
 /* Container chính của carousel */
 .position-relative {
@@ -987,10 +1003,7 @@ aside.card-container {
     margin: 0 auto; /* Căn giữa */
 }
 
-/* Owl Carousel chung */
-.owl-carousel-curved .owl-item {
-    transition: all 0.3s ease;
-}
+
 
 /* Item trong carousel */
 .item {
@@ -1142,10 +1155,6 @@ aside.card-container {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .px-4 {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
 
     .f-MONTSERRAT-BOLD {
         font-size: 1.1rem;
@@ -1164,8 +1173,117 @@ aside.card-container {
         width: 30px;
         height: 30px;
     }
+    .card-carousel-curved {
+      
+    }
+
 }
 
+/*   WHAT TO EXPECT   */
+.bg-mountain {
+    background-size: 100%;
+    margin-top: 3rem;
+    position: relative;
+    background-image: url('https://d1j8r0kxyu9tj8.cloudfront.net/files/CWYHkaRicrusmYmzDgP7BcaGjmVUAn7AGO7Qx5PB.png');
+    padding-top: 25%;
+    background-size: cover; /* Hình ảnh phủ toàn bộ phần tử */
+    background-position: center; /* Căn giữa hình ảnh */
+    background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+}
+
+.content-overlay {
+    position: absolute;
+    left: 0;
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.button-group {
+    display: flex;
+    align-items: center;
+}
+
+.btn-custom {
+    border-radius: 50%;
+    padding: 0.5rem 1rem;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-right: 0.5rem;
+    border: none;
+}
+
+.btn-custom-md {
+    padding: 0.5rem 1.5rem;
+}
+
+.title-text {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+.badge-course {
+    text-transform: uppercase;
+    border-radius: 15px;
+    height: 23px;
+    width: 153px;
+    color: #000;
+    text-align: center;
+    margin: 0.5rem 0;
+    background-color: #fff;
+    font-weight: bold;
+    font-size:large;
+}
+
+.btn-register-dk {
+    display: inline-block;
+    border-radius: 9999px;
+    background-color: #e93737;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-register-dk i {
+    margin-left: 0.5rem;
+}
+
+@media (max-width: 768px) {
+
+    .title-text {
+        font-size: 1.2rem; /* Giảm kích thước chữ */
+        margin-top: 1rem; /* Giảm khoảng cách */
+    }
+
+    .badge-course {
+    }
+
+    .btn-register-dk {
+        padding: 0.3rem 1rem; /* Thu nhỏ nút */
+        font-size: 0.8rem; /* Giảm kích thước chữ */
+    }
+
+    .btn-register-dk i {
+        margin-left: 0.3rem; /* Giảm khoảng cách */
+    }
+    .bg-mountain {
+        background-size: 200%;
+        background-image: url('images/bg-bottom-aside.png');
+        background-size: cover; /* Hình ảnh phủ toàn bộ phần tử */
+        background-position: center; /* Căn giữa hình ảnh */
+        background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+        padding-top: 55%;
+    }
+}
 
 
 
@@ -1481,8 +1599,8 @@ aside.card-container {
     height: 60px;
     width: 185px;
     border-radius: 100%;
-    top: 2700px; /* Có thể cần điều chỉnh tùy ngữ cảnh */
-    left: 100px;
+    top: 3200px; /* Có thể cần điều chỉnh tùy ngữ cảnh */
+    left: 110px;
     transform: rotate(337deg);
     z-index: -1;
 }
@@ -2174,7 +2292,6 @@ aside.card-container {
     background: #fff;
     position: relative;
     margin-top: 3rem;
-    
 }
 
 .container {

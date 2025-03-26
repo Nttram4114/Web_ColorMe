@@ -29,10 +29,22 @@
                         <span class="original-price">70.000.000đ</span>
                     </div>
                     <div class="countdown">
-                        <div class="time-box"><span>6</span><small>ngày</small></div>
-                        <div class="time-box"><span>07</span><small>giờ</small></div>
-                        <div class="time-box"><span>58</span><small>phút</small></div>
-                        <div class="time-box"><span>28</span><small>giây</small></div>
+                        <div class="time-box">
+                            <span class="count-date">4</span>
+                            <small class="text-gray-600">ngày</small>
+                        </div>
+                        <div class="time-box">
+                            <span class="count-hours">07</span>
+                            <small class="text-gray-600">giờ</small>
+                        </div>
+                        <div class="time-box">
+                            <span class="count-minutes">35</span>
+                            <small class="text-gray-600">phút</small>
+                        </div>
+                        <div class="time-box">
+                            <span class="count-seconds">35</span>
+                            <small class="text-gray-600">giây</small>
+                        </div>
                     </div>
                 </div>
                 <button class="cta-btn" style="margin-left: 20px;">Tìm hiểu ngay ➜</button>
@@ -91,7 +103,6 @@
         <a href="#" class="main-nav-login-btn">
             <i class="fa-solid fa-circle-right"></i> <span style="margin:3px;">Đăng nhập</span>   
         </a>
-      
         <button class="main-nav-toggler" onclick="toggleMenu()">☰ Menu</button>
       </nav>
       
@@ -157,7 +168,7 @@
                 <div class="feature-content">
                     <h3>Phương pháp đào tạo hiện đại</h3>
                 </div>
-                    <div class="feature-image img2" style="padding-left: 100px;">
+                    <div class="feature-image img2" >
                         <img src="images//phuongphapdaotaohiendai.png" alt="Feature 2">
                     </div>
                 <div class="feature-content"></div>
@@ -166,7 +177,7 @@
             
 
             <div class="feature red">
-                <div class="feature-image img3" style="padding-right: 50px">
+                <div class="feature-image img3">
                     <img src="images//tinhungdungcao.png" alt="Feature 3">
                 </div>
                 <div class="feature-content">
@@ -190,31 +201,33 @@
 
 
         <!-- Đối tượng của khóa học -->
-    <div class="aside-top" >
-        <h3>Được Xây Dựng Vì Lợi Ích Cộng Đồng</h3>
-        <h2>KHOA HỌC NHÂN CHUYÊN MÔN</h2>
-    </div>
-
-    <div class="aside-bottom">
-        <aside class="card-container">
-            <div class="card" >
-                <img src="images//HSSV.png" alt="Học Sinh, Sinh Viên" style="background-color: #e63946;">
-                <h3>HỌC SINH, SINH VIÊN</h3>
-                <p>Có định hướng rõ ràng nhất để phát huy năng lực bản thân trong ngành truyền thông và sáng tạo.</p>
-            </div>
-            <div class="card" >
-                <img src="images/NhanSu.png" alt="Nhân Sự Sáng Tạo" style="background-color:#e6d356; border: 10px solid #ead891;">
-                <h3>NHÂN SỰ SÁNG TẠO</h3>
-                <p>Làm việc tại Agency, Production House, Corporation có chuyên môn thiết kế sáng tạo bài bản, chuyên nghiệp.</p>
-            </div>
-            <div class="card">
-                <img src="images/NhanSuCM.png" alt="Nhân Sự Chuyên Môn" style="background-color:#e63946;">
-                <h3>NHÂN SỰ CHUYÊN MÔN</h3>
-                <p>Mở rộng kỹ năng, nâng cao kiến thức và mở rộng thêm cơ hội nghề nghiệp trong tương lai.</p>
-            </div>
-        </aside>
-    </div>
-
+    <div class="aside">
+            <img class="position-absolute end-0" style="width: 20%;min-width: 200px; z-index: 1; right:0;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/WCu1ylrmiO9wbBNMDAxnDHKlz5DbYgqD5PKnrvWL.png" alt="">
+        <div class="aside-top" >
+            <h3>Được Xây Dựng Vì Lợi Ích Cộng Đồng</h3>
+            <h2>KHOA HỌC NHÂN CHUYÊN MÔN</h2>
+        </div>
+        <div class="aside-bottom">
+            <aside class="card-container">
+                <div class="card" >
+                    <img src="images//HSSV.png" alt="Học Sinh, Sinh Viên" style="background-color: #e63946;">
+                    <h3>HỌC SINH, SINH VIÊN</h3>
+                    <p>Có định hướng rõ ràng nhất để phát huy năng lực bản thân trong ngành truyền thông và sáng tạo.</p>
+                </div>
+                <div class="card" >
+                    <img src="images/NhanSu.png" alt="Nhân Sự Sáng Tạo" style="background-color:#e6d356; border: 10px solid #ead891;">
+                    <h3>NHÂN SỰ SÁNG TẠO</h3>
+                    <p>Làm việc tại Agency, Production House, Corporation có chuyên môn thiết kế sáng tạo bài bản, chuyên nghiệp.</p>
+                </div>
+                <div class="card">
+                    <img src="images/NhanSuCM.png" alt="Nhân Sự Chuyên Môn" style="background-color:#e63946;">
+                    <h3>NHÂN SỰ CHUYÊN MÔN</h3>
+                    <p>Mở rộng kỹ năng, nâng cao kiến thức và mở rộng thêm cơ hội nghề nghiệp trong tương lai.</p>
+                </div>
+                    <img class="position-absolute start-0" style="width: 10%;min-width: 200px; z-index: -1;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/KwJpylx19Sbcrk4nS7GifsAznkezhvhCu1e4iiDu.png" alt="">
+            </aside>
+        </div>
+       
    
         <!-- Slider-card 1-->
         <div class="position-relative py-5 card-carousel-curved px-2 overflow-hidden">
@@ -224,8 +237,8 @@
                     <div class="bg-white rounded-30 overflow-hidden px-4 py-2 h-100">
                         <div class="position-relative overflow-hidden">
                             <div class="bg-curved-active position-absolute start-0 w-100 h-100" style="z-index: 1; top: -1px;"></div>
-                            <img class="w-100 position-relative" style="z-index: 3;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Ggki50iMgCSz1geQgktrnyrzIsm0QZSaBxPduiUD.png" alt="">
-                            <img class="position-absolute top-10 start-0" style="z-index: 2; height: 99%;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/uqPaqpvRACJlhSC5ivesJrDPs1AfzvV3yHc7tTQJ.png" alt="">
+                            <img class="w-100 position-relative" style="z-index: 3;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Ggki50iMgCSz1geQgktrnyrzIsm0QZSaBxPduiUD.png" alt="Background Image">
+                            <img class="position-absolute top-10 start-0" style="z-index: 2; height: 99%;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/uqPaqpvRACJlhSC5ivesJrDPs1AfzvV3yHc7tTQJ.png" alt="Overlay Image">
                         </div>
                         <div class="fw-bold f-MONTSERRAT-BOLD lh-sm my-2">LÝ THUYẾT CĂN BẢN TRỌNG TÂM</div>
                         <div class="f-MONTSERRAT-REGULAR lh-sm mb-2">
@@ -238,8 +251,8 @@
                     <div class="bg-white rounded-30 overflow-hidden px-4 py-2 h-100">
                         <div class="position-relative overflow-hidden">
                             <div class="bg-curved-active position-absolute start-0 w-100 h-100" style="z-index: 1; top: -1px;"></div>
-                            <img class="w-100 position-relative" style="z-index: 3;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Ggki50iMgCSz1geQgktrnyrzIsm0QZSaBxPduiUD.png" alt="">
-                            <img class="position-absolute top-10 start-0" style="z-index: 2; height: 99%;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/9vMbq7G9FdPamuK9o6QT0cAIeePpjoBbPhPTJTG0.png" alt="">
+                            <img class="w-100 position-relative" style="z-index: 3;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Ggki50iMgCSz1geQgktrnyrzIsm0QZSaBxPduiUD.png" alt="Background Image">
+                            <img class="position-absolute top-10 start-0" style="z-index: 2; height: 99%;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/9vMbq7G9FdPamuK9o6QT0cAIeePpjoBbPhPTJTG0.png" alt="Overlay Image">
                         </div>
                         <div class="fw-bold f-MONTSERRAT-BOLD lh-sm my-2">ĐỘ THÀNH TẠO CÔNG CỤ THIẾT KẾ</div>
                         <div class="f-MONTSERRAT-REGULAR lh-sm mb-2">
@@ -252,8 +265,8 @@
                     <div class="bg-white rounded-30 overflow-hidden px-4 py-2 h-100">
                         <div class="position-relative overflow-hidden">
                             <div class="bg-curved-active position-absolute start-0 w-100 h-100" style="z-index: 1; top: -1px;"></div>
-                            <img class="w-100 position-relative" style="z-index: 3;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Ggki50iMgCSz1geQgktrnyrzIsm0QZSaBxPduiUD.png" alt="">
-                            <img class="position-absolute top-10 start-0" style="z-index: 2; height: 99%;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Bh56KqA82tySOKAqyeQXxgmHZQrr1HDBACyzL6uo.png" alt="">
+                            <img class="w-100 position-relative" style="z-index: 3;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Ggki50iMgCSz1geQgktrnyrzIsm0QZSaBxPduiUD.png" alt="Background Image">
+                            <img class="position-absolute top-10 start-0" style="z-index: 2; height: 99%;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Bh56KqA82tySOKAqyeQXxgmHZQrr1HDBACyzL6uo.png" alt="Overlay Image">
                         </div>
                         <div class="fw-bold f-MONTSERRAT-BOLD lh-sm my-2">PHƯƠNG PHÁP HỌC ĐA DẠNG</div>
                         <div class="f-MONTSERRAT-REGULAR lh-sm mb-2">
@@ -266,8 +279,8 @@
                     <div class="bg-white rounded-30 overflow-hidden px-4 py-2 h-100">
                         <div class="position-relative overflow-hidden">
                             <div class="bg-curved-active position-absolute start-0 w-100 h-100" style="z-index: 1; top: -1px;"></div>
-                            <img class="w-100 position-relative" style="z-index: 3;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Ggki50iMgCSz1geQgktrnyrzIsm0QZSaBxPduiUD.png" alt="">
-                            <img class="position-absolute top-10 start-0" style="z-index: 2; height: 99%;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/TTscE6rWbxMRF2zoqJMTzoQFjmqD0Pchn2dqnAHm.png" alt="">
+                            <img class="w-100 position-relative" style="z-index: 3;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Ggki50iMgCSz1geQgktrnyrzIsm0QZSaBxPduiUD.png" alt="Background Image">
+                            <img class="position-absolute top-10 start-0" style="z-index: 2; height: 99%;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/TTscE6rWbxMRF2zoqJMTzoQFjmqD0Pchn2dqnAHm.png" alt="Overlay Image">
                         </div>
                         <div class="fw-bold f-MONTSERRAT-BOLD lh-sm my-2">LỘ TRÌNH MANG TÍNH ỨNG DỤNG CAO</div>
                         <div class="f-MONTSERRAT-REGULAR lh-sm mb-2">
@@ -280,8 +293,8 @@
                     <div class="bg-white rounded-30 overflow-hidden px-4 py-2 h-100">
                         <div class="position-relative overflow-hidden">
                             <div class="bg-curved-active position-absolute start-0 w-100 h-100" style="z-index: 1; top: -1px;"></div>
-                            <img class="w-100 position-relative" style="z-index: 3;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Ggki50iMgCSz1geQgktrnyrzIsm0QZSaBxPduiUD.png" alt="">
-                            <img class="position-absolute top-10 start-0" style="z-index: 2; height: 99%;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/tmjs5WmXZNGqnDeIRV9OOtF9EAB7KZmnRvMoNJZO.png" alt="">
+                            <img class="w-100 position-relative" style="z-index: 3;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Ggki50iMgCSz1geQgktrnyrzIsm0QZSaBxPduiUD.png" alt="Background Image">
+                            <img class="position-absolute top-10 start-0" style="z-index: 2; height: 99%;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/tmjs5WmXZNGqnDeIRV9OOtF9EAB7KZmnRvMoNJZO.png" alt="Overlay Image">
                         </div>
                         <div class="fw-bold f-MONTSERRAT-BOLD lh-sm my-2">MÔI TRƯỜNG HỌC GIÀU CẢM HỨNG</div>
                         <div class="f-MONTSERRAT-REGULAR lh-sm mb-2">
@@ -294,8 +307,8 @@
                     <div class="bg-white rounded-30 overflow-hidden px-4 py-2 h-100">
                         <div class="position-relative overflow-hidden">
                             <div class="bg-curved-active position-absolute start-0 w-100 h-100" style="z-index: 1; top: -1px;"></div>
-                            <img class="w-100 position-relative" style="z-index: 3;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Ggki50iMgCSz1geQgktrnyrzIsm0QZSaBxPduiUD.png" alt="">
-                            <img class="position-absolute top-10 start-0" style="z-index: 2; height: 99%;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/OQDWxfWsj7WLIyDYjP26LTp8vrUFr1zjoU4Dm2J0.png" alt="">
+                            <img class="w-100 position-relative" style="z-index: 3;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/Ggki50iMgCSz1geQgktrnyrzIsm0QZSaBxPduiUD.png" alt="Background Image">
+                            <img class="position-absolute top-10 start-0" style="z-index: 2; height: 99%;" src="https://d1j8r0kxyu9tj8.cloudfront.net/files/OQDWxfWsj7WLIyDYjP26LTp8vrUFr1zjoU4Dm2J0.png" alt="Overlay Image">
                         </div>
                         <div class="fw-bold f-MONTSERRAT-BOLD lh-sm my-2">SỰ TƯ VẤN & HỖ TRỢ NHIỆT TÌNH</div>
                         <div class="f-MONTSERRAT-REGULAR lh-sm mb-2">
@@ -304,28 +317,22 @@
                     </div>
                 </div>
             </div>
-            <!-- Navigation Buttons -->
-            <div class="owl-nav">
-                <button type="button" class="owl-prev">
-                    <div class="nav-btn prev-slide rounded-circle shadow bg-white logo-lg d-flex align-items-center justify-content-center bg-red">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="47" height="43" viewBox="0 0 47 43" fill="none">
-                            <path d="M22.2354 2.96094C21.0817 9.12094 11.6337 21.4299 2.60547 21.416" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M22.0933 39.9827C20.9964 33.8192 13.577 21.4841 2.63374 21.4672" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M2.6445 21.4264L44.1226 21.5542" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                    </div>
-                </button>
-                <button type="button" class="owl-next">
-                    <div class="nav-btn next-slide rounded-circle shadow bg-white logo-lg d-flex align-items-center justify-content-center bg-red">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="47" height="43" viewBox="0 0 47 43" fill="none">
-                            <path d="M24.7646 3.27734C25.9183 9.43735 35.3663 21.7463 44.3945 21.7324" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M24.9069 40.2988C26.0038 34.1353 33.4231 21.8003 44.3664 21.7834" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M44.3554 21.7428L2.87738 21.8706" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                    </div>
-                </button>
+        </div>
+        <div class="bg-mountain">
+            <div class="content-overlay">
+                <div class="button-group">
+                    <button class="btn-custom btn-custom-md">6 tháng</button>
+                    <button class="btn-custom btn-custom-md">72 buổi</button>
+                    <button class="btn-custom">1 đồ án</button>
+                </div>
+                <div class="title-text">NHỮNG GÌ KHOÁ HỌC MANG LẠI</div>
+                <span class="badge-course">What to expect</span>
+                <a href="#pick-class" class="btn-register-dk">
+                    Đăng ký ngay <i class="fa-solid fa-arrow-right"></i></i>
+                </a>
             </div>
         </div>
+    </div>
 
 
 

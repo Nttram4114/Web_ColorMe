@@ -10,6 +10,41 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
+    function startCountdown() {
+        const countdown = setInterval(() => {
+            let days = parseInt(document.querySelector('.count-date').textContent);
+            let hours = parseInt(document.querySelector('.count-hours').textContent);
+            let minutes = parseInt(document.querySelector('.count-minutes').textContent);
+            let seconds = parseInt(document.querySelector('.count-seconds').textContent);
+    
+            if (seconds > 0) {
+                seconds--;
+            } else if (minutes > 0) {
+                seconds = 59;
+                minutes--;
+            } else if (hours > 0) {
+                seconds = 59;
+                minutes = 59;
+                hours--;
+            } else if (days > 0) {
+                seconds = 59;
+                minutes = 59;
+                hours = 23;
+                days--;
+            } else {
+                clearInterval(countdown);
+                return;
+            }
+    
+            document.querySelector('.count-date').textContent = days.toString().padStart(2, '0');
+            document.querySelector('.count-hours').textContent = hours.toString().padStart(2, '0');
+            document.querySelector('.count-minutes').textContent = minutes.toString().padStart(2, '0');
+            document.querySelector('.count-seconds').textContent = seconds.toString().padStart(2, '0');
+        }, 1000);
+    }
+    
+    // Start the countdown when the page loads
+    window.onload = startCountdown;
 
     // Header: Thông báo khi menu đã tải xong
     console.log("Menu đã tải xong!");
