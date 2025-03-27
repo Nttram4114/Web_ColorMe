@@ -3,7 +3,9 @@ body{
     font-size: 1rem;
     margin: 0;
 }
-
+html, body {
+    overflow-x: hidden;
+}
 
 /* THIẾT KẾ ĐỒ HỌA ĐA PHƯƠNG TIỆN */
 .top-header {
@@ -857,10 +859,12 @@ h1 {
     text-align: center;
 }
 
-.aside-top h3{
+.aside-top p {
     margin: 0;
     font-size: 24px;
     color: white;
+    padding-top: 3%;
+    text-transform: uppercase;
 }
 
 .aside-top h2 {
@@ -892,8 +896,7 @@ aside.card-container {
 }
 
 .card img {
-    border: 10px solid #ef7676;
-    border-radius: 45%;
+    border-radius: 150px ;
     width: 280px;
     height: 380px;
     object-fit: cover;
@@ -903,13 +906,31 @@ aside.card-container {
 .card h3 {
     margin: 10px 0;
     font-size: 20px;
-    
+    text-align: center;
+    margin-top: 10%;
 }
 
 .card p {
     font-size: 14px;
     line-height: 1.5;
+    text-align: center;
 }
+
+.card-img-bd {
+    position: relative;
+    width: fit-content;
+}
+
+.border-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.border-img:hover{
+    border-radius: none;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
     .aside-top {
@@ -922,15 +943,16 @@ aside.card-container {
     }
 
     .card {
-        width: 90%; 
+        width: 88%; 
         margin-bottom: -22px; /* Thêm khoảng cách giữa các card */
         border-radius: 0;
     }
 
     .card img {
         align-items: center;
-        height: auto;
+        height: 100%;
     }
+    
 }
 
 /* Tablet (768px - 1023px) */
@@ -970,7 +992,8 @@ aside.card-container {
 
 
 
-/* List-card  */
+
+/* LIST CARD  */
 .card-carousel-curved {
     width: 100%;
     position: relative;
@@ -1109,8 +1132,8 @@ aside.card-container {
 }
 
 .nav-btn {
-    width: 60px;
-    height: 60px;
+    width: 200px;
+    height: 100%;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -1589,6 +1612,9 @@ aside.card-container {
 
     .arrow.right {
         right: 3px;
+    }
+    .d-md-block{
+        display: none;
     }
 }
 
@@ -2414,6 +2440,9 @@ aside.card-container {
 @media (max-width: 768px) {
     .features-container {
         display: none; /* Ẩn toàn bộ .features-container trên mobile */
+    }
+    .start-0{
+        z-index: -1;
     }
 }
 
